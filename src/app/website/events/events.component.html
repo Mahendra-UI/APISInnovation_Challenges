@@ -1,0 +1,179 @@
+<section style="background-image: url('assets/images/eventsbghero.jpeg');">
+    <div class="container">
+        <div class="section_title">
+            <h2>Upcoming Events
+            </h2>
+        </div>
+        <div class="section_content d-none">
+            <p>
+                Transform your team's health and wellness in just 2 minutes
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <ngx-slick-carousel class="carousel"
+                    #slickModal="slick-carousel" [config]="slideConfig"
+                    (init)="slickInit($event)"
+                    (breakpoint)="breakpoint($event)"
+                    (afterChange)="afterChange($event)"
+                    (beforeChange)="beforeChange($event)">
+                    <div ngxSlickItem class="slide">          
+                      <div class="card card-01 fintech_card">
+                      <img class="card-img-top img-fluid" src="assets/images/events/fintech.png" alt="Card image cap">
+                      <div class="card-body text-center">
+                        <span class="badge-box"><i class="fa fa-calendar"></i></span>
+                        <h4 class="card-title">Fintech Innovation Challenge 2022</h4>
+
+                        <!-- <h6 class="card-title">Dead Line: <span>05-09-2023</span></h6> -->
+                        <p class="card-text">
+                          Prize 10. Lakh rs split between the Top 10 ideas
+                      </p>
+                      <button type="button" class="btn btn-primary btn-closed position-relative">
+                        Closed
+                        <!-- <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                          99+ -->
+                          <!-- <span class="visually-hidden">unread messages</span> -->
+                        <!-- </span> -->
+                      </button>
+                      <!-- <a replace class="fintech_pulse_button">Know more</a> -->
+                        <!-- <a replace class="btn text-center text-white text-uppercase know">Know more</a> -->
+                      </div>
+                    </div>
+              </div>
+              <div ngxSlickItem class="slide">          
+                <div class="card card-01">
+                <img class="card-img-top img-fluid" src="assets/images/events/datasecurity.png" alt="Card image cap">
+                <div class="card-body text-center">
+                  <span class="badge-box"><i class="fa fa-calendar"></i></span>
+                  <h4 class="card-title">Cyber Security Innovation Challenge 2023</h4>
+                  <h6 class="card-title card-coming">Coming Soon</h6>
+  
+                  <p class="card-text">
+                    Prize 10. Lakh rs split between the Top 10 ideas
+                </p>
+                <a routerLink="/cybersecurity" class="btn text-center text-white text-uppercase know">Know More</a>
+                <!-- <a routerLink="/datasecuritychallenges" class="btn enroll_button text-center text-white text-uppercase">Coming soon</a> -->
+                </div>
+              </div>
+            </div>
+              <div ngxSlickItem class="slide">          
+                <div class="card card-01">
+                <img class="card-img-top img-fluid" src="assets/images/events/logistics.png" alt="Card image cap">
+                <div class="card-body text-center">
+                  <span class="badge-box"><i class="fa fa-calendar"></i></span>
+                  <h4 class="card-title">Logistics Innovation Challenge 2025</h4>
+                  <h6 class="card-title card-coming">Coming Soon</h6>
+  
+                  <p class="card-text">
+                    Prize 10. Lakh rs split between the Top 10 ideas
+                </p>
+                <a replace class="btn enroll_button text-center text-white text-uppercase">Coming soon</a>
+                <!-- <a routerLink="/logisticschallenges" class="btn enroll_button text-center text-white text-uppercase">Coming soon</a> -->
+                </div>
+              </div>
+            </div>
+            
+              <div ngxSlickItem class="slide">          
+                <div class="card card-01">
+                <img class="card-img-top img-fluid" src="assets/images/events/agritech.png" alt="Card image cap">
+                <div class="card-body text-center">
+                  <span class="badge-box"><i class="fa fa-calendar"></i></span>
+                  <h4 class="card-title">Agritech Innovation Challenge 2025</h4>
+                  <h6 class="card-title card-coming">Coming Soon</h6>
+
+                  <p class="card-text">
+                    Prize 10. Lakh rs split between the Top 10 ideas
+                </p>
+                <a replace class="btn enroll_button text-center text-white text-uppercase">Coming soon</a>
+                </div>
+              </div>
+            </div>
+
+                    <div ngxSlickItem class="slide">          
+                            <div class="card card-01">
+                            <img class="card-img-top img-fluid" src="assets/images/events/healthtech.png" alt="Card image cap">
+                            <div class="card-body text-center">
+                              <span class="badge-box"><i class="fa fa-calendar"></i></span>
+                              <h4 class="card-title">Healthtech Innovation Challenge 2025</h4>
+                              <h6 class="card-title card-coming">Coming Soon</h6>
+      
+                              <!-- <h6 class="card-title">Dead Line: <span>05-09-2023</span></h6> -->
+                              <p class="card-text">
+                                Prize 10. Lakh rs split between the Top 10 ideas
+                            </p>
+                              <a replace class="btn enroll_button text-center text-white text-uppercase">Coming soon</a>
+                            </div>
+                          </div>
+                    </div>
+
+                    <div ngxSlickItem class="slide">          
+                        <div class="card card-01">
+                        <img class="card-img-top img-fluid" src="assets/images/events/animal.png" alt="Card image cap">
+                        <div class="card-body text-center">
+                          <span class="badge-box"><i class="fa fa-calendar"></i></span>
+                          <h4 class="card-title">Animal Husbandry Innovation Challenge 2025</h4>
+                          <h6 class="card-title card-coming">Coming Soon</h6>
+  
+                          <!-- <h6 class="card-title">Dead Line: <span>05-09-2023</span></h6> -->
+                          <p class="card-text">
+                            Prize 10. Lakh rs split between the Top 10 ideas
+                        </p>
+                        <a replace class="btn enroll_button text-center text-white text-uppercase">Coming soon</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div ngxSlickItem class="slide">          
+                      <div class="card card-01">
+                      <img class="card-img-top img-fluid" src="assets/images/events/fisheries.png" alt="Card image cap">
+                      <div class="card-body text-center">
+                        <span class="badge-box"><i class="fa fa-calendar"></i></span>
+                        <h4 class="card-title">Fisheries Innovation Challenge 2025</h4>
+                        <h6 class="card-title card-coming">Coming Soon</h6>
+
+                        <!-- <h6 class="card-title">Dead Line: <span>05-09-2023</span></h6> -->
+                        <p class="card-text">
+                          Prize 10. Lakh rs split between the Top 10 ideas
+                      </p>
+                        <a replace class="btn enroll_button text-center text-white text-uppercase">Coming soon</a>
+                      </div>
+                    </div>
+              </div>
+              
+              <div ngxSlickItem class="slide">          
+                  <div class="card card-01">
+                  <img class="card-img-top img-fluid" src="assets/images/events/meditech.png" alt="Card image cap">
+                  <div class="card-body text-center">
+                    <span class="badge-box"><i class="fa fa-calendar"></i></span>
+                    <h4 class="card-title">Meditech Innovation Challenge 2025</h4>
+                    <h6 class="card-title card-coming">Coming Soon</h6>
+                    <!-- <h6 class="card-title">Dead Line: <span>05-09-2023</span></h6> -->
+                    <p class="card-text">
+                      Prize 10. Lakh rs split between the Top 10 ideas
+                  </p>
+                  <a replace class="btn enroll_button text-center text-white text-uppercase">Coming soon</a>
+                  </div>
+                </div>
+              </div>
+              <div ngxSlickItem class="slide">          
+                <div class="card card-01">
+                <img class="card-img-top img-fluid" src="assets/images/events/defencelogistics.png" alt="Card image cap">
+                <div class="card-body text-center">
+                  <span class="badge-box"><i class="fa fa-calendar"></i></span>
+                  <h4 class="card-title">Defence Logistics Innovation Challenge 2025</h4>
+                  <h6 class="card-title card-coming">Coming Soon</h6>
+                  <!-- <h6 class="card-title">Dead Line: <span>05-09-2023</span></h6> -->
+                  <p class="card-text">
+                    Prize 10. Lakh rs split between the Top 10 ideas
+                </p>
+                <a replace class="btn enroll_button text-center text-white text-uppercase">Coming soon</a>
+                </div>
+              </div>
+            </div>
+            
+        
+
+                </ngx-slick-carousel>
+            </div>
+        </div>
+    </div>
+</section>

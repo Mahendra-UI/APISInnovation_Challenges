@@ -1,0 +1,28 @@
+.section_title_separate_bg h2 {
+      color: #fff;
+  }
+.key_card {
+    border-left: 6px solid #26AC7C;
+    background: #fff;
+    padding: 24px 16px 32px;
+    border-radius: 14px;
+}
+.description p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #282828;
+}
+a {
+    text-decoration: none;
+}
+.stmt_knowmore a {
+    color: #fff;
+    background: #13ad06;
+    font-size: 14px;
+    padding: 10px 16px;
+    text-decoration: none;
+    cursor: pointer;
+}

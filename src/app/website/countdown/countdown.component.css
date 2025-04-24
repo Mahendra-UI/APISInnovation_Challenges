@@ -1,0 +1,43 @@
+.countertime {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    justify-content: flex-start;
+}
+.countertime div {
+    text-align: center;
+    /* border: 2px solid #028C72; */
+    padding: 10px 8px;
+    margin-right: 6px;
+    background: #1fbcb4;
+    width: 81px;
+}
+.countertime p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+span {
+    font-size: 14px;
+}
+.countertime h2 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 0;
+    line-height: 40px;
+}
+
+@media screen and (max-width: 450px) {
+    .countertime div {
+        text-align: center;
+        /* border: 2px solid #028C72; */
+        padding: 10px;
+        margin-right: 2px;
+    }
+    span {
+        font-size: 12px;
+    }
+    .countertime h2 {
+        font-size: 19px;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,47 @@
+.event_name_details h2 {
+    font-weight: 800;
+  }
+  ::marker {
+      color: #028C72;
+  }
+  .herobg {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      padding: 85px 0 34px;
+  }
+  table tr td {
+      padding-left: 10px;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 22px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #fff;
+  }
+  table tr th {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 54px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #fff;
+  }
+  .social_img img {
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: center;
+      padding: 18px;
+  }
+  
+  .range_date i {
+    color: #FEB909;
+  }
+  .range_date p {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+  }

@@ -1,0 +1,89 @@
+  /* roles section css starts */
+  section {
+    padding: 85px 0;
+    background-image: url('/assets/images/rolesbg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.section_title h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .section_title {
+    width: 60%;
+    max-width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+.section_title h2 {
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #028C72;
+}
+
+.boxone {
+    background: rgb(85,90,192);
+    background: linear-gradient(90deg, rgba(85,90,192,1) 0%, rgba(126,132,255,1) 35%);
+    padding: 20px 20px 84px;
+    border-radius: 6px;
+    border: 1px solid #7E84FF;
+}
+.boxtwo {
+    background: rgb(31,207,141);
+    background: linear-gradient(90deg, rgba(31,207,141,1) 0%, rgba(36,180,126,1) 35%);
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #1FCF8D;
+}
+.boxthree {
+    background: rgb(7,84,246);
+    background: linear-gradient(90deg, rgba(7,84,246,1) 0%, rgba(45,113,254,1) 35%);
+    padding: 20px 20px 144px;
+    border-radius: 6px;
+    border: 1px solid #2D71FE;
+}
+.box_image {
+    text-align: center;
+    padding: 0 0 20px;
+}
+.box_content p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: justify;
+    color: #fff;
+}
+.box_sub_heading h4 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #0D1056;
+    text-transform: uppercase;
+}
+.box_list ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.box_list ul li {
+    padding-left: 28px;
+    position: relative;
+    margin-bottom: 8px;
+    color: #fff;
+}
+.box_list ul li i {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1;
+}
+  /* roles section css ends */

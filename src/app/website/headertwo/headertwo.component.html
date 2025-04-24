@@ -1,0 +1,613 @@
+<style>
+    .navbar-toggler-icon {
+        background-image: url("assets/images/menu.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        filter: invert(0);
+        width: 42px;
+        height: 36px;
+        position: fixed;
+    top: 3%;
+    right: 3%;
+    }
+</style>
+<section class="webnav">
+    <!-- <nav class="navbar navbar-expand-sm fixed-top myclass py-0" (scroll)="onWindowScroll();" 
+     style="border-bottom: 1px solid #fff;"> -->
+     <nav class="navbar navbar-expand-sm myclass py-0" (scroll)="onWindowScroll();" 
+     style="border-bottom: 1px solid #fff;">
+     <div class="container">
+      <a class="navbar-brand" routerLink="/home" (scroll)="onWindowScrollImage">
+        <img src="assets/images/logo/apislogo.png" alt="Logo" class="logo img-fluid">
+    </a>
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar"><span class="navbar-toggler-icon"></span>
+      </button> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <li class="nav-item"> 
+            <a class="nav-link active" aria-current="page" routerLink="/home" routerLinkActive="linkActive">Home</a>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/about" routerLinkActive="linkActive">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Problem Statements
+            </button>
+            <ul class="dropdown-menu py-0">
+              <li>
+                <a class="nav-link" routerLink="/problemstatements" routerLinkActive="linkActive">Fintech</a>
+            </li>
+            <li>
+                <a class="nav-link" routerLink="/challenges/cybersecurity/problemstatements" routerLinkActive="linkActive">Cyber Security</a>
+            </li>
+            <li>
+                <a class="nav-link" routerLink="/challenges/civilsupplies/problemstatements" routerLinkActive="linkActive">Civil Supplies</a>
+            </li>
+            </ul>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/eligibility" routerLinkActive="linkActive">Eligibilty</a>
+          </li>
+          <li class="nav-item applylink">
+            <!-- data-toggle="modal" data-target="#registrationModal" -->
+            <a class="nav-link" href="https://app.thebizplanner.com/public/application/inc/63186b45647d6d9f9e518110" target="_blank">Apply</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contactus" routerLinkActive="linkActive">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </nav>
+    
+</section>
+<section class="mobilenav p-0">
+    <nav class="py-0 navbar navbar-expand-sm myclass"
+    style="border-bottom: 1px solid #fff;" (scroll)="onWindowScroll();">
+    <!-- <nav class="py-0 navbar navbar-expand-sm fixed-top myclass"
+     style="border-bottom: 1px solid #fff;" (scroll)="onWindowScroll();"> -->
+     <a class="navbar-brand" routerLink="/home">
+        <img src="assets/images/logo/apislogo.png" alt="Logo" class="logo img-fluid">
+    </a>
+      <!-- <button class="navbar-toggler" type="button" aria-expanded="false" data-bs-toggle="collapse" aria-controls="collapsibleNavbar2" data-bs-target="#collapsibleNavbar2"><span class="navbar-toggler-icon"></span>
+      </button> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar2" aria-controls="collapsibleNavbar2" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar2">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/about">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Problem Statements
+            </button>
+            <ul class="dropdown-menu py-0">
+              <li>
+                <a class="nav-link" routerLink="/problemstatements" routerLinkActive="linkActive">Fintech</a>
+            </li>
+            <li>
+                <a class="nav-link" routerLink="/challenges/cybersecurity/problemstatements" routerLinkActive="linkActive">Cyber Security</a>
+            </li>
+            <li>
+                <a class="nav-link" routerLink="/challenges/civilsupplies/" routerLinkActive="linkActive">Civil Supplies</a>
+            </li>
+            </ul>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/eligibility">Eligibilty</a>
+          </li>
+          <li class="nav-item applylink">
+            <!-- data-toggle="modal" data-target="#registrationModal" -->
+            <a class="nav-link" href="https://app.thebizplanner.com/public/application/inc/63186b45647d6d9f9e518110" target="_blank">Apply</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#footer">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+</section>
+
+
+
+
+<div class="modal fade" id="registrationModal" data-backdrop="static"
+    data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="registrationModalLabel">Challenge Accepted ?</h4>
+                <button type="button" class="btn-close" data-dismiss="modal"
+                    aria-label="Close">
+                    <i class="fa fa-times"
+                    aria-hidden="true"></i></button>
+            </div>
+            <div class="modal-body">
+<form [formGroup]="RegForm" (ngSubmit)="onSubmit()">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center py-3" style="color: #1fbcb4;">
+                         Fill in details to submit your application
+                    </p>
+                </div>
+                <div class="col-md-12">
+                    <!-- <div class="stmt_title">
+                        <h3>Application Form</h3>
+                    </div> -->
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputName">Name</label>
+                        <input type="text" autocomplete="off" class="form-control" id="applicantName" placeholder="Please enter Name"
+                            [ngClass]="{'is-invalid':
+                            govformcontrols.applicantName.touched
+                            && govformcontrols.applicantName.errors }" formControlName="applicantName">
+                                                    
+                            <span class="text-danger" *ngIf="(govformcontrols.applicantName.touched ||
+                            submitted) &&
+                            govformcontrols.applicantName.errors?.required">
+                            Name is required
+                        </span>
+                        <span class="text-danger" *ngIf="govformcontrols.applicantName.errors?.pattern">
+                            Alpha numerics Allowed
+                         </span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputName">Participation Type</label>
+                        <br>
+                        <label>
+                        <input type="radio" name="participateType" value="Ideation"
+                            formControlName="participateType" (click)="participateTypeEvent($event)">
+                        Ideation</label>
+                        <label>
+                        <input type="radio" class="ml-3" name="participateType" value="Deployment"
+                            formControlName="participateType" (click)="participateTypeEvent($event)">
+                        Deployment</label><br>
+
+                        <span class="text-danger" *ngIf="(govformcontrols.participateType.touched ||
+                            submitted) &&
+                            govformcontrols.participateType.errors?.required">
+                            Participation Type is required
+                        </span>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-6" *ngIf="ideationTypeSection">
+                    <div class="form-group">
+                        <label for="inputName">Ideation Type</label>
+                        <br>
+                        <label>
+                        <input type="radio" name="ideationType" value="1"
+                            formControlName="ideationType" (click)="ideationTypeCheck($event)">
+                        Researcher</label>
+                        <label>
+                        <input class="ml-2" type="radio" name="ideationType" value="2" formControlName="ideationType"
+                            (click)="ideationTypeCheck($event)">
+                        Student</label>
+                        <label>
+                        <input class="ml-2" type="radio" name="ideationType" value="3"
+                            formControlName="ideationType" (click)="ideationTypeCheck($event)">
+                        Faculties</label><br>
+
+                        <span class="text-danger" *ngIf="(govformcontrols.ideationType.touched ||
+                            submitted) &&
+                            govformcontrols.ideationType.errors?.required">
+                            Ideation Type is required
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6" *ngIf="deploymentTypeSection">
+                    <div class="form-group">
+                        <label for="inputName">Deployment Type</label>
+                        <br>
+                        <label>
+                        <input type="radio" name="deploymentType" value="4"
+                            formControlName="deploymentType" (click)="deploymentTypeCheck($event)">
+                        Indian Companies</label>
+                        <label class="px-3">
+                        <input type="radio" name="deploymentType" value="5"
+                            formControlName="deploymentType" (click)="deploymentTypeCheck($event)">
+                        Startup</label>
+                        <label>
+                        <input type="radio" name="deploymentType" value="7"
+                            formControlName="deploymentType" (click)="deploymentTypeCheck($event)">
+                        MSMEs/LLPs</label>
+                        <label class="px-3">
+                        <input type="radio" name="deploymentType" value="8"
+                            formControlName="deploymentType" (click)="deploymentTypeCheck($event)">
+                        Professionals</label>
+                        <!-- <label>  <input type="radio" name="deploymentType" value="9"
+                                formControlName="deploymentType" (click)="deploymentTypeCheck($event)">
+                            Others</label> -->
+                            <br>
+
+                        <span class="text-danger" *ngIf="(govformcontrols.deploymentType.touched ||
+                            submitted) &&
+                            govformcontrols.deploymentType.errors?.required">
+                            Deployment Type is required
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6" *ngIf="startupSection">
+                    <div class="form-group">
+                        <label for="inputName">Startup Type</label>
+                        <br>
+
+                        <input type="radio" id="html" name="startupType" value="Registered"
+                            formControlName="startupType" (click)="statupTypeCheck($event)">
+                        &nbsp;<label for="html">Registered</label>
+                        <input class="ml-2" type="radio" id="css" name="startupType" value="Not registered"
+                            formControlName="startupType" (click)="statupTypeCheck($event)">
+                        &nbsp;<label for="css">Not Registered</label><br>
+
+                        <span class="text-danger" *ngIf="(govformcontrols.startupType.touched ||
+                            submitted) &&
+                            govformcontrols.startupType.errors?.required">
+                            Startup Type is required
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputDate">Problem Statement</label>
+                        <select class="form-control" id="problemStatement" placeholder="problemStatement"
+                         [ngClass]="{'is-invalid':
+                            govformcontrols.problemStatement.touched &&
+                            govformcontrols.problemStatement.errors }" formControlName="problemStatement">
+                            <option value="">Select Problem Statement</option>
+                            <option value="1">Problem Statement 1</option>
+                            <option value="2">Problem Statement 2</option>
+                            <option value="3">Problem Statement 3</option>
+                            <option value="4">Problem Statement 4</option>
+                            <option value="5">Problem Statement 5</option>
+
+                        </select>
+                        <span class="text-danger" *ngIf="(govformcontrols.problemStatement.touched || submitted)
+                            && govformcontrols.problemStatement.errors?.required">
+                            Problem Statement Selection is required
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputName">Name of {{nameOfOrg}}</label>
+                        <input type="text" autocomplete="off" formControlName="nameOfOrganization" class="form-control"
+                            placeholder="Name of {{nameOfOrg}}" [ngClass]="{ 'is-invalid':
+                            govformcontrols.nameOfOrganization.touched &&
+                            govformcontrols.nameOfOrganization.errors }" />
+                        <span class="text-danger" *ngIf="(govformcontrols.nameOfOrganization.touched
+                            || submitted) &&
+                            govformcontrols.nameOfOrganization.errors?.required">
+                            Name of {{nameOfOrg}} is required
+                        </span>
+                        <span class="text-danger" *ngIf="govformcontrols.nameOfOrganization.errors?.pattern">
+                            Alpha numerics Allowed
+                         </span>
+                        
+                    </div>
+                </div>
+
+                <div class="col-md-6" *ngIf="deploymentExtraSection">
+                    <div class="form-group">
+                        <label for="inputName">Year Established</label>
+                        <input autocomplete="off" type="text" formControlName="yearEstablished" minlength="4" maxlength="4" class="form-control"
+                            placeholder="Year Established" [ngClass]="{ 'is-invalid':
+                            govformcontrols.yearEstablished.touched &&
+                            govformcontrols.yearEstablished.errors }" (keypress)="numberOnly($event)"/>
+                        <span class="text-danger" *ngIf="(govformcontrols.yearEstablished.touched
+                            || submitted) &&
+                            govformcontrols.yearEstablished.errors?.required">
+                            Year Established is required <br>
+                        </span>
+
+                        <span class="text-danger"
+                            *ngIf="(govformcontrols.yearEstablished.touched || submitted)
+                             && govformcontrols.yearEstablished.errors?.minlength">
+                            Please input valid year<br>
+                        </span>
+                        <span class="text-danger"
+                            *ngIf="govformcontrols.yearEstablished.errors?.pattern">
+                            Only numbers accepted
+                        </span>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6" *ngIf="deploymentExtraSection">
+                    <div class="form-group">
+                        <label for="inputName">Is GST registered in Andhra
+                            Pradesh?</label>
+                        <br>
+
+                        <input type="radio" id="html" name="gstRegistrated" value="true" formControlName="gstRegistrated"
+                            (click)="gstRegistratedCheck($event)"> &nbsp;
+                        <label for="html">Yes</label>
+                        <input class="ml-2" type="radio" id="css" name="gstRegistrated" value="false" formControlName="gstRegistrated"
+                            (click)="gstRegistratedCheck($event)">&nbsp;
+                        <label for="css">No</label>
+                            <br>
+                        <span class="text-danger" *ngIf="(govformcontrols.gstRegistrated.touched ||
+                            submitted) &&
+                            govformcontrols.gstRegistrated.errors?.required">
+                            GST selection is required
+                        </span>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputName">Location</label>
+                        <input autocomplete="off" type="text" class="form-control" id="location" placeholder="Please enter location"
+                            [ngClass]="{'is-invalid':
+                            govformcontrols.location.touched &&
+                            govformcontrols.location.errors }" formControlName="location">
+                        <span class="text-danger" *ngIf="(govformcontrols.location.touched ||
+                            submitted) &&
+                            govformcontrols.location.errors?.required">
+                            Location is required
+                        </span>
+                        <span class="text-danger" *ngIf="govformcontrols.location.errors?.pattern">
+                            Alpha numerics and . / , -, (, ) are allowed
+                         </span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputDate">State</label>
+                        <select class="form-control" id="state" placeholder="state" [ngClass]="{'is-invalid':
+                            govformcontrols.state.touched &&
+                            govformcontrols.state.errors }" formControlName="state">
+                            <option value="">Select</option>
+                            <option *ngFor="let item of statesArray" [value]="item.state_code">{{item.state_name}}</option>
+                        </select>
+                        <span class="text-danger" *ngIf="(govformcontrols.state.touched || submitted)
+                            && govformcontrols.state.errors?.required">
+                            State is required
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-md-6" *ngIf="studentFieldsShow">
+                    <!-- <div class="form-group">
+                        <label for="inputName">Education</label>
+                        <select class="form-control" id="education" placeholder="state" [ngClass]="{'is-invalid':
+                            govformcontrols.education.touched &&
+                            govformcontrols.education.errors }" formControlName="education">
+                            <option>Select</option>
+                            <option>B.Tech</option>
+                        </select>
+                        <span class="text-danger" *ngIf="(govformcontrols.education.touched ||
+                            submitted) &&
+                            govformcontrols.education.errors?.required">
+                            Education is required
+                        </span>
+                    </div> -->
+
+                    <div class="form-group">
+                        <label for="inputName">Education</label>
+                        <input autocomplete="off" type="text" class="form-control" id="education" placeholder="Please enter Education" [ngClass]="{'is-invalid':
+                            govformcontrols.education.touched &&
+                            govformcontrols.education.errors }" formControlName="education">
+                        <span class="text-danger" *ngIf="(govformcontrols.education.touched || submitted)
+                            && govformcontrols.education.errors?.required">
+                            Education is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-6" *ngIf="studentFieldsShow">
+                    <div class="form-group">
+                        <label for="inputName">Education Year</label>
+                        <input autocomplete="off" type="text" class="form-control" id="year" placeholder="Please enter Education Year" [ngClass]="{'is-invalid':
+                            govformcontrols.year.touched &&
+                            govformcontrols.year.errors }" formControlName="year">
+                        <span class="text-danger" *ngIf="(govformcontrols.year.touched || submitted)
+                            && govformcontrols.year.errors?.required">
+                            Education Year is required
+                        </span>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-6" *ngIf="researcherFieldsShow">
+                    <div class="form-group">
+                        <label for="inputName">Research Type</label>
+                        <input autocomplete="off" type="text" class="form-control" id="typeResearch"
+                            placeholder="Please enter Research Type" [ngClass]="{'is-invalid':
+                            govformcontrols.typeResearch.touched &&
+                            govformcontrols.typeResearch.errors }" formControlName="typeResearch">
+                        <span class="text-danger" *ngIf="(govformcontrols.typeResearch.touched ||
+                            submitted) &&
+                            govformcontrols.typeResearch.errors?.required">
+                            Research Type is required
+                        </span>
+                        <span class="text-danger" *ngIf="govformcontrols.typeResearch.errors?.pattern">
+                            Alpha numerics Allowed
+                         </span>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputName">Email Id</label>
+                        <input autocomplete="off" type="email" class="form-control" id="emailId" placeholder="Please enter Email Id"
+                            [ngClass]="{'is-invalid': govformcontrols.emailId.touched && govformcontrols.emailId.errors }"
+                            formControlName="emailId" >
+                        <span class="text-danger"
+                            *ngIf="(govformcontrols.emailId.touched || submitted) && govformcontrols.emailId.errors?.required">
+                            Email Id is required
+                        </span>
+                        <div class="text-danger" *ngIf="govformcontrols.emailId.errors?.email">Email must be a valid email address</div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
+
+
+                    <div class="form-group">
+                        <label for="inputName">Phone Number</label>
+                        <input autocomplete="off" type="text" class="form-control" id="phoneNum" placeholder="Please enter Phone Number"
+                            [ngClass]="{'is-invalid': govformcontrols.phoneNum.touched && govformcontrols.phoneNum.errors }"
+                            formControlName="phoneNum" minlength="10" maxlength="10" (keypress)="numberOnly($event)">
+                        <span class="text-danger"
+                            *ngIf="(govformcontrols.phoneNum.touched || submitted) && govformcontrols.phoneNum.errors?.required">
+                            Phone Number is required<br>
+                        </span>
+                        
+                        <span class="text-danger"
+                            *ngIf="(govformcontrols.phoneNum.touched || submitted) && govformcontrols.phoneNum.errors?.minlength">
+                            Please input valid mobile number<br>
+                        </span>
+                        
+                    
+                        <span class="text-danger"
+                            *ngIf="govformcontrols.phoneNum.errors?.pattern">
+                            Only numbers accepted
+                        </span>
+                    </div>
+
+                    
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputName">Address</label>
+                        <textarea autocomplete="off" type="text" class="form-control" id="address" placeholder="Please enter Address"
+                            [ngClass]="{'is-invalid':
+                            govformcontrols.address.touched &&
+                            govformcontrols.address.errors }" formControlName="address">
+                    </textarea>
+                        <span class="text-danger" *ngIf="(govformcontrols.address.touched ||
+                            submitted) &&
+                            govformcontrols.address.errors?.required">
+                            Address is required
+                        </span>
+                        <span class="text-danger" *ngIf="govformcontrols.address.errors?.pattern">
+                            Alpha numerics and . / , -, (, ) are allowed
+                         </span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputName">Aadhar Number</label>
+                        <input autocomplete="off" type="text" class="form-control" id="aadharNumber"
+                            placeholder="Please enter Aadhar Number" [ngClass]="{'is-invalid':
+                            govformcontrols.aadharNumber.touched &&
+                            govformcontrols.aadharNumber.errors }" formControlName="aadharNumber"
+                            (blur)="validateAadhar($event)" maxlength="12" minlength="12" (keypress)="numberOnly($event)">
+                        <span class="text-danger" *ngIf="(govformcontrols.aadharNumber.touched ||
+                            submitted) &&
+                            govformcontrols.aadharNumber.errors?.required">
+                            Aadhar Number is required <br>
+                        </span>
+                        <span class="text-danger" *ngIf="govformcontrols.aadharNumber.errors?.pattern">
+                            Only Numbers allowed
+                        </span>
+                    </div>
+                </div>
+
+                <!-- <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputName">Problem Statement</label>
+                        <select class="form-control" id="problemStatement"
+                            placeholder="state"
+                            [ngClass]="{'is-invalid':
+                            govformcontrols.problemStatement.touched &&
+                            govformcontrols.problemStatement.errors }"
+                            formControlName="problemStatement">
+                            <option>Select</option>
+                            <option>Statement 1</option>
+                            <option>Statement 3</option>
+                        </select>
+                        <span class="text-danger"
+                            *ngIf="(govformcontrols.problemStatement.touched ||
+                            submitted) &&
+                            govformcontrols.problemStatement.errors?.required">
+                            Problem Statement is required
+                        </span>
+                    </div>
+                </div> -->
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="d-flex">
+                            <div>
+                                <label for="inputPhoto">Document</label>
+                                <input type="file" class="form-control attachcontrol" id="inputDocument" formControlName="document"
+                                    placeholder="document" [ngClass]="{'is-invalid':
+                                    govformcontrols.document.touched &&
+                                    govformcontrols.document.errors }" placeholder="document"
+                                    (change)="fileUpload($event)" accept=".pdf, .pptx">
+                                <span class="text-danger" *ngIf="(govformcontrols.document.touched ||
+                                    submitted) &&
+                                    govformcontrols.document.errors?.required">
+                                    Document is required
+                                </span>
+                                <h6 class="text-danger"><strong>Note: </strong>
+                                     Supported formats are (.pdf, .ptt) and max file size limit is 10MB
+                                </h6>
+                            </div>
+                            <div class="pl-2">
+                                <iframe *ngIf="iFrameDisplay" [src]="downloadUrl" class="image" width="200"
+                                    height="200"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="action_button float-right py-3">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</form>
+</div>
+<!-- <div class="modal-footer">
+    <button type="button" class="btn btn-secondary"
+        data-dismiss="modal">Close</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</div> -->
+
+</div>
+</div>
+</div>
+
+<!-- registration modal ends -->
+
+
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal"
+data-target="#registrationModal"  style="margin-top: 300px;">
+Apply Now
+</button> -->

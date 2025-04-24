@@ -1,0 +1,50 @@
+  /* roles section css starts */
+section {
+    padding: 40px 0;
+}
+.section_title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  section {
+    padding: 40px 0;
+  }
+  .section_title {
+    width: 60%;
+    max-width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+.section_title h2 {
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #028C72;
+}
+.roles_section_subheading ul {
+    list-style: none;
+    padding: 0;
+}
+
+.roles_section_subheading ul li {
+    padding-left: 28px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.roles_section_subheading ul li i {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    font-size: 16px;
+    color: #2DA771;
+    line-height: 1;
+}
+.roles_section_subheading h4 {
+    
+}
+
+  /* roles section css ends */

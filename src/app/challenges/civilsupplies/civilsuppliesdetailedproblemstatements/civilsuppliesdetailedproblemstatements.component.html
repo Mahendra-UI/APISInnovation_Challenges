@@ -1,0 +1,197 @@
+<app-civilsuppliesbanner></app-civilsuppliesbanner>
+<style>
+    .card {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right;
+    }
+</style>
+<section class="" style="position: relative;z-index: 9;">
+    <div class="container">
+        <div class="row py-2">
+            <div class="col-md-12">
+                <div class="back">
+                    <a routerLink="/challenges/civilsupplies/civilhome" class="text-white" style="text-decoration: none;font-size: 20px"> < Back to Problem Statements</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .card-body {
+            box-shadow: 0 0 10px #155384;
+        }
+    </style>
+    <div class="container">
+        <div class="card card-body" style="background-image: url('assets/images/cybersecurity/problem_bg.png');">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="stmtdetails pt-4">
+                    <div class="stmt_title">
+                        <h3>Problem Statement {{statementId}}</h3>
+                    </div>
+                </div>
+                <div class="description">
+                    <!-- <h4>Heading</h4> -->
+                    <div class="desc_content">
+                        <p>
+                            {{object[statementId]?.heading}}
+                        </p>
+                    </div>
+                </div>
+                <div class="description">
+                    <h4>Detailed Description</h4>
+                    <div class="desc_content">
+                        <p>
+                            {{object[statementId]?.detailsDes}}
+                        </p>
+                    </div>
+                </div>
+                <div class="event_time d-none">
+                    <h5>
+                        Proposal submission date
+                    </h5>
+                    <h6>
+                        Start date: <span>August 16th, 2022</span> 
+                    </h6>
+                    <h6>
+                        End date: <span>September 20th, 2022</span>
+                    </h6>
+                </div>
+                <div class="category d-none">
+                    <h5>Category</h5>
+                    <p>Insurtech, Insurance/Reinsurance</p>
+                </div>
+                <div class="tags d-none">
+                    <h5>Problem statement tags</h5>
+                    <p>insurtech   |    insurance    |    lifeinsurance    |     deathclaim</p>
+                </div>
+                <div class="description">
+                    <h4>Expected Outcome</h4>
+                    <div class="desc_content">
+                        <div [innerHTML]="object[statementId]?.outcome">
+                            <!-- An application to be developed to collect revenue at all the sservice delivery points
+                            through <strong>deployment of dynamic QR code</strong> that can hold cash in a digital wallet &
+                            integrate it with CFMS for remitting the amount to Government. The payment needs to
+                            be tagged as per the department -->
+
+                            <!-- {{object[statementId]?.outcome}} -->
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-md-7" style="border-left: 1px solid orange;">
+                <app-registration [statementId]=statementId></app-registration>
+            </div> -->
+        </div>
+        <div class="row align-items-center py-4">
+            <div class="col-md-4">
+                
+            </div>
+            <div class="col-md-6 text-right">
+                <div class="challenge">
+                    <h3>
+                        Challenge Accepted ?
+                    </h3>
+                </div>
+            </div>
+            <div class="col-md-2">
+
+                <div class="actions text-center">
+                   
+                    <style>
+                        .actions .enroll_button {
+                            /* border: 2px solid #028C72; */
+                            /* background: #d7aa2b;
+                            padding: 20px 0;
+                            width: -webkit-fill-available; */
+                            background: #1ab51a;
+                        padding: 8px 20px;
+                        /* width: 42%; */
+                        border-radius: 30px;
+                        /* margin-top: 20px; */
+                        }
+                        .social_img img {
+                          background-image: url('assets/images/socialiconbg.png');
+                        }
+                        .social_img img:hover {
+                          background-image: url('assets/images/socialiconbghover.png');
+                        }
+                    </style>
+                    <style>
+                        .pulse-button {
+
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(90, 153, 212, 0.5);
+  -webkit-animation: pulse 1.5s infinite;
+}
+
+.pulse-button:hover {
+  -webkit-animation: none;
+}
+@keyframes pulse {
+    0% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+        opacity: 0;
+    }
+}
+
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(26, 181, 26, 0.3), 0 0 0 0em rgba(26, 181, 26, 0.3), 0 0 0 0em rgba(26, 181, 26, 0.3), 0 0 0 0em rgba(26, 181, 26, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 0 1em rgba(26, 181, 26, 0.3), 0 0 0 0em rgba(26, 181, 26, 0.3), 0 0 0 2em rgba(26, 181, 26, 0.3), 0 0 0 0em rgba(26, 181, 26, 0);
+    }
+}
+/* 
+@-webkit-keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 84, 33, 0.3), 0 0 0 1em rgba(255, 84, 33, 0.3), 0 0 0 3em rgba(255, 84, 33, 0.3), 0 0 0 5em rgba(255, 84, 33, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 0 1em rgba(255, 84, 33, 0.3), 0 0 0 3em rgba(255, 84, 33, 0.3), 0 0 0 5em rgba(255, 84, 33, 0.3), 0 0 0 8em rgba(255, 84, 33, 0);
+    }
+} */
+
+
+@-webkit-keyframes pulse {
+  0% {
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  70% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(90, 153, 212, 0);
+  }
+  100% {
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
+  }
+}
+
+                    </style>
+
+<a routerLink="/civilsupplieshackathon" style="cursor: pointer;" class="pulse-button btn enroll_button text-center text-white text-uppercase">Apply</a>
+                </div> 
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+</section>
+<!-- <app-faqone></app-faqone> -->

@@ -1,0 +1,440 @@
+<section class="pt-3">
+    <div class="container">
+        <div class="card card-body">
+            <div class="row app_mainheading">
+                <div class="col-md-12">
+                    <h2 class="mb-0">Challenges Registrations</h2>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-start">
+                            <li class="breadcrumb-item"><a>Home</a></li>
+                            <!-- <li class="breadcrumb-item"><a>Reports</a></li> -->
+                            <li class="breadcrumb-item active" aria-current="page">
+                                <span>Challenges Registrations</span>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="hstack gap-2 form-group justify-content-end">
+                        <div class="count_class">
+                            <!-- <h5 class="" style="visibility: hidden;">test</h5> -->
+                            <h5 class="mb-0">Applications count : <span>{{challengeDataArray?.length}}</span></h5>
+                        </div>
+                        <!-- <div>
+                            <input class="form-control search w-100 searchTerm" type="text" name="search"
+                                placeholder="Enter search keyword" [(ngModel)]="searchtext" aria-label="search" />
+                        </div> -->
+                        <div>
+                            <i (click)="downloadExcel()" class="bi bi-file-earmark-excel fa-2x"
+                                style="color: #018C4B;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive" id="tableinfo">
+                        <table class="table-bordered p-2">
+                            <thead>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>APP. ID</th>
+                                    <th>Full Name</th>
+                                    <th>Email ID</th>
+                                    <th>Mobile Number</th>
+                                    <th>Challange Name</th>
+                                    <th>Submitted on</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- filter: filterTerm | -->
+                                <tr
+                                    *ngFor="let item of challengeDataArray | filter: searchtext | paginate: { itemsPerPage: itemsPerPage, currentPage: p,id: 'first' };let i=index">
+                                    <td>{{(p - 1) * itemsPerPage + i + 1}}</td>
+                                    <td>{{item.application_id}}</td>
+                                    <td>{{item.name_of_startupfounder_or_co_founder}}</td>
+                                    <td>{{item.email_id}}</td>
+                                    <td>{{item.mobile_number}}</td>
+                                    <td>{{item.challenge_name}}</td>
+                                    <td>{{item.inserted_on | date: 'dd-MM-yyyy, hh:mm a' }}</td>
+                                    <td>
+                                        <button class="btn btn-sm viewbutton" data-bs-toggle="modal"
+                                            (click)="modalData(item, i)" data-bs-target="#viewModal">View</button>
+                                    </td>
+                                </tr>
+                                <tr *ngIf="challengeDataArray.length == 0" class="text-center">
+                                    <td colspan="8" class="text-center">No Records Found</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="d-flex justify-content-end pt-3">
+                            <pagination-controls id="first" (pageChange)="onPageChange($event)">
+                            </pagination-controls>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="viewModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="viewModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-white" id="viewModalLabel">Registered User Info</h5>
+                <button type="button" class="btn-close bg-white opacity-100" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="bi bi-x-lg"></i>
+                    <!-- <i class="fa fa-times"
+                    aria-hidden="true"></i> -->
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div id="" class="mr-auto ml-auto border px-2">
+                    <div id="firstPDFPrint">
+                        <div class="user-preview">
+
+                            <div class="row mt-3 user-preview">
+
+                                <div class="col-md-12 ml-auto mr-auto">
+                                    <fieldset class="border p-2">
+                                        <legend class="w-auto print float-none p-2">Registration Details
+                                        </legend>
+                                        <div class="row p-2">
+                                            <!-- <div class="col-md-12 mx-auto">
+                                            <h4 class="print form-heading">Personal Details</h4>
+                                        </div> -->
+
+                                            <div class="col-md-6">
+                                                <div class="form-group d-flex flex-md-row flex-sm-row flex-wrap">
+                                                    <div class="col-md-5 col-sm-4 col-12 col-sm-4">
+                                                        <div class="previewLabelName">
+                                                            Full Name
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">:</div>
+                                                    <div class="col-md-6 col-12 col-sm-7">
+                                                        <div class="previewLabelValue">
+                                                            {{this.viewData?.['name_of_startupfounder_or_co_founder']}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group d-flex flex-md-row flex-sm-row flex-wrap">
+                                                    <div class="col-md-5 col-12 col-sm-4">
+                                                        <div class="previewLabelName">
+                                                            Challenge Name
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">:</div>
+                                                    <div class="col-md-6 col-12 col-sm-7">
+                                                        <div class="previewLabelValue">
+                                                            {{this.viewData?.['challenge_name']}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group d-flex flex-md-row flex-sm-row flex-wrap">
+                                                    <div class="col-md-5 col-sm-4 col-12 col-sm-4">
+                                                        <div class="previewLabelName">
+                                                            Application ID
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">:</div>
+                                                    <div class="col-md-6 col-12 col-sm-7">
+                                                        <div class="previewLabelValue">
+                                                            {{this.viewData?.['application_id']}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group d-flex flex-md-row flex-sm-row flex-wrap">
+                                                    <div class="col-md-5 col-12 col-sm-4">
+                                                        <div class="previewLabelName">
+                                                            Submitted Date
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">:</div>
+                                                    <div class="col-md-6 col-12 col-sm-7">
+                                                        <div class="previewLabelValue">
+                                                            {{this.viewData?.['inserted_on'] | date: 'dd-MM-yyyy, hh:mm
+                                                            a'}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group d-flex flex-md-row flex-sm-row flex-wrap">
+                                                    <div class="col-md-5 col-12 col-sm-4">
+                                                        <div class="previewLabelName">
+                                                            Email ID
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">:</div>
+                                                    <div class="col-md-6 col-12 col-sm-7">
+                                                        <div class="previewLabelValue">
+                                                            {{this.viewData?.['email_id']}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group d-flex flex-md-row flex-sm-row flex-wrap">
+                                                    <div class="col-md-5 col-12 col-sm-4">
+                                                        <div class="previewLabelName">
+                                                            Startup Registered State
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">:</div>
+                                                    <div class="col-md-6 col-12 col-sm-7">
+                                                        <div class="previewLabelValue">
+                                                            {{this.viewData?.['state_name']}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group d-flex flex-md-row flex-sm-row flex-wrap">
+                                                    <div class="col-md-5 col-12 col-sm-4">
+                                                        <div class="previewLabelName">
+                                                            City/Town
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">:</div>
+                                                    <div class="col-md-6 col-12 col-sm-7">
+                                                        <div class="previewLabelValue">
+                                                            {{this.viewData?.['city_or_town']}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group d-flex flex-md-row flex-sm-row flex-wrap">
+                                                    <div class="col-md-5 col-12 col-sm-4">
+                                                        <div class="previewLabelName">
+                                                            Website URL
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">:</div>
+                                                    <div class="col-md-6 col-12 col-sm-7">
+                                                        <div class="previewLabelValue">
+                                                            {{this.viewData?.['website_url'] == '' ? "NA":
+                                                            this.viewData?.['website_url']}}
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group d-flex flex-md-row flex-sm-row flex-wrap">
+                                                    <div class="col-md-5 col-12 col-sm-4">
+                                                        <div class="previewLabelName">
+                                                            Founder/Startup LinkedIn Profile
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">:</div>
+                                                    <div class="col-md-6 col-12 col-sm-7">
+                                                        <div class="previewLabelValue">
+                                                            {{this.viewData?.['linkedin_profile'] == '' ? "NA":
+                                                            this.viewData?.['linkedin_profile']}}
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group d-flex flex-md-row flex-sm-row flex-wrap">
+                                                    <div class="col-md-5 col-12 col-sm-4">
+                                                        <div class="previewLabelName">
+                                                            Problem Statement
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">:</div>
+                                                    <div class="col-md-6 col-12 col-sm-7">
+                                                        <div class="previewLabelValue">
+                                                            {{this.viewData?.['problem_name']}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group d-flex flex-md-row flex-sm-row flex-wrap">
+                                                    <div class="col-md-5 col-12 col-sm-4">
+                                                        <div class="previewLabelName">
+                                                            Mobile No.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">:</div>
+                                                    <div class="col-md-6 col-12 col-sm-7">
+                                                        <div class="previewLabelValue">
+                                                            {{this.viewData?.['mobile_number']}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group d-flex flex-md-row flex-sm-row flex-wrap">
+                                                    <div class="col-md-5 col-12 col-sm-4">
+                                                        <div class="previewLabelName">
+                                                            Alternate Email ID
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">:</div>
+                                                    <div class="col-md-6 col-12 col-sm-7">
+                                                        <div class="previewLabelValue">
+                                                            {{this.viewData?.['alternate_emailid'] == '' ? "NA":
+                                                            this.viewData?.['alternate_emailid']}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group d-flex flex-md-row flex-sm-row flex-wrap">
+                                                    <div class="col-md-5 col-12 col-sm-4">
+                                                        <div class="previewLabelName">
+                                                            Designation
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">:</div>
+                                                    <div class="col-md-6 col-12 col-sm-7">
+                                                        <div class="previewLabelValue">
+                                                            {{this.viewData?.['designation']}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group d-flex flex-md-row flex-sm-row flex-wrap">
+                                                    <div class="col-md-5 col-12 col-sm-4">
+                                                        <div class="previewLabelName">
+                                                            Startup Name
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">:</div>
+                                                    <div class="col-md-6 col-12 col-sm-7">
+                                                        <div class="previewLabelValue">
+                                                            {{this.viewData?.['startup_name']}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group d-flex flex-md-row flex-sm-row flex-wrap">
+                                                    <div class="col-md-5 col-12 col-sm-4">
+                                                        <div class="previewLabelName">
+                                                            Type of Entity
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">:</div>
+                                                    <div class="col-md-6 col-12 col-sm-7">
+                                                        <div class="previewLabelValue">
+                                                            {{this.viewData?.['entity_name']}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group d-flex flex-md-row flex-sm-row flex-wrap">
+                                                    <div class="col-md-5 col-12 col-sm-4">
+                                                        <div class="previewLabelName">
+                                                            Year of Corporation
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">:</div>
+                                                    <div class="col-md-6 col-12 col-sm-7">
+                                                        <div class="previewLabelValue">
+                                                            {{this.viewData?.['year_of_incorporation']}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group d-flex flex-md-row flex-sm-row flex-wrap">
+                                                    <div class="col-md-5 col-12 col-sm-4">
+                                                        <div class="previewLabelName">
+                                                            DPIIT Certificate (Startup India Recognition)
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">:</div>
+                                                    <div class="col-md-6 col-12 col-sm-7">
+                                                        <div class="previewLabelValue">
+                                                            {{this.viewData?.['dpiit_certificate']}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group d-flex flex-md-row flex-sm-row flex-wrap">
+                                                    <div class="col-md-5 col-12 col-sm-4">
+                                                        <div class="previewLabelName">
+                                                            DPIIT Number
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">:</div>
+                                                    <div class="col-md-6 col-12 col-sm-7">
+                                                        <div class="previewLabelValue">
+                                                            {{this.viewData?.['dpiit_number'] == '' ? "NA":
+                                                            this.viewData?.['dpiit_number']}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group d-flex flex-md-row flex-sm-row flex-wrap">
+                                                    <div class="col-md-5 col-12 col-sm-4">
+                                                        <div class="previewLabelName">
+                                                            Current stage of Startup
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-1">:</div>
+                                                    <div class="col-md-6 col-12 col-sm-7">
+                                                        <div class="previewLabelValue">
+                                                            {{this.viewData?.['current_stage_name']}}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row p-2">
+                                            <div class="col-md-12">
+                                                <div class="previewLabelName">
+                                                    Solution :
+                                                </div>
+                                                <div class="previewLabelValue">
+                                                    {{this.viewData?.['solution_for_problem']}}
+                                                </div>
+                                            </div>
+                                        <div class="col-md-12">
+                                            <div class="previewLabelName">
+                                                Value Proposition :
+                                            </div>
+                                            <div class="previewLabelValue">
+                                                {{this.viewData?.['value_proposition']}}
+                                            </div>
+                                        </div>
+                                </div>
+                                </fieldset>
+                                <fieldset class="border p-2 mt-3">
+                                    <legend class="w-auto print float-none p-2">Attachments</legend>
+                                    <div class="row p-2">
+                                        <div class="col-md-12 mx-auto">
+                                            <h4 class="print form-heading">Registration Attachments</h4>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group d-flex flex-md-row flex-sm-row flex-wrap">
+                                                <div class="col-md-5 col-12 col-sm-4">
+                                                    <div class="previewLabelName">
+                                                        Board Resolution / Authorisation Letter
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1">:</div>
+                                                <div class="col-md-6 col-12 col-sm-7">
+                                                    <div class="previewLabelValue">
+                                                        <a [href]=authorisation_letter download>Download</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group d-flex flex-md-row flex-sm-row flex-wrap">
+                                                <div class="col-md-5 col-12 col-sm-4">
+                                                    <div class="previewLabelName">
+                                                        Pitch Deck (Idea Presentation)
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-1">:</div>
+                                                <div class="col-md-6 col-12 col-sm-7">
+                                                    <div class="previewLabelValue">
+                                                        <a [href]=pitch_deck download>Download</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>

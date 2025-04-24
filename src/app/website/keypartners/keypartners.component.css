@@ -1,0 +1,176 @@
+section {
+    padding: 50px 0;
+}
+
+.section_title {
+    margin-bottom: 30px;
+}
+
+.section_title h2 {
+    color: #028C72;
+    font-size: 36px;
+    font-weight: 900;
+    /* line-height: 44px; */
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.section_content {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 30px;
+}
+
+.section_content p {
+    color: #333;
+    font-size: 18px;
+    font-weight: 400;
+    /* line-height: 22px; */
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+/* box css starts */
+
+.serviceBox {
+    color: #606060;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 30px 37px 45px;
+    border-radius: 0 0 110px 110px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.serviceBox:before,
+.serviceBox:after {
+    content: '';
+    background: linear-gradient(to right, #B1EF22, #3EAE40);
+    border-radius: 5px 5px 0 0;
+    position: absolute;
+    left: 0;
+    top: 25%;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
+}
+
+.serviceBox:after {
+    background: linear-gradient(#fff, rgba(255, 255, 255, 0.85), #fff);
+    border-radius: 20px 20px 100px 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    left: 15px;
+    top: 15px;
+    bottom: 15px;
+    right: 15px;
+    clip-path: none;
+}
+
+.serviceBox .service-img {
+    color: #000;
+    font-size: 45px;
+    text-align: center;
+    margin: 0 0 15px 0;
+}
+.serviceBox .apis img {
+    width: 80%;
+}
+.serviceBox .finblue img {
+    width: 50%;
+}
+
+.serviceBox:hover .service-img img {
+    transform: rotateY(360deg);
+    transition: all 0.3s;
+}
+.serviceBox .service-icon {
+    color: #000;
+    font-size: 45px;
+    text-align: right;
+    margin: 0 0 15px 0;
+}
+
+.serviceBox:hover .service-icon i {
+    transform: rotateY(360deg);
+    transition: all 0.3s;
+}
+
+.serviceBox .title {
+    color: #3EAE40;
+    font-size: 19px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+
+.serviceBox .description {
+    font-size: 15px;
+    line-height: 24px;
+    text-align: justify;
+    margin: 0 0 10px;
+}
+
+.serviceBox .read-more {
+    display: none;
+    color: #3EAE40;
+    font-size: 15px;
+    text-decoration: underline;
+    /* display: inline-block; */
+    transition: all 0.3s ease;
+}
+
+.serviceBox .read-more:hover {
+    color: #333;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.serviceBox.green:before {
+    background: linear-gradient(to right, #019F88, #037389);
+}
+
+.serviceBox.green .title,
+.serviceBox.green .read-more {
+    color: #037389;
+}
+
+.serviceBox.green .read-more:hover {
+    color: #333;
+}
+
+.serviceBox.blue:before {
+    background: linear-gradient(to right, #00C5E8, #0374EA);
+}
+
+.serviceBox.blue .title,
+.serviceBox.blue .read-more {
+    color: #0374EA;
+}
+
+.serviceBox.blue .read-more:hover {
+    color: #333;
+}
+
+.serviceBox.purple:before {
+    background: linear-gradient(to right, #884FBA, #891BDE);
+}
+
+.serviceBox.purple .title,
+.serviceBox.purple .read-more {
+    color: #891BDE;
+}
+
+.serviceBox.purple .read-more:hover {
+    color: #333;
+}
+
+@media only screen and (max-width:990px) {
+    .serviceBox {
+        margin: 0 0 30px;
+    }
+}
+
+/* box css ends */

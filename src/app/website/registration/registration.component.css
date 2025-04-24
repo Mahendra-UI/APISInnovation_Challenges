@@ -1,0 +1,20 @@
+.form-group {
+    margin-bottom: 10px;
+}
+.stmt_title h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #028C72;
+}
+.attachcontrol {
+    padding: 3px;
+}
+.modal-title {
+    color: #fff;
+}
+.modal-header {
+    background: #001C5A;
+}

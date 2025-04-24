@@ -1,0 +1,130 @@
+
+.count_class h5 {
+    color: #193567;
+    font-weight: 600;
+    font-size: 17px;
+}
+.modal-header {
+    background: linear-gradient(270deg, #018C4B -2.64%, #01787C 100%);
+    color: #fff;
+}
+.btn-close {
+    background: #193567;
+    opacity: 1;
+    line-height: 1em;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+label {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #333333;
+    margin-bottom: 4px;
+}
+.modal-title {
+    color: #fff;
+}
+.app_mainheading h2 {
+    color: #193567;
+    font-weight: 600;
+    font-size: 32px;
+}
+.app_mainheading nav ol li.active {
+    color: #00A24E !important;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    padding-right: 0.5rem;
+    color: #333333 !important;
+    font-family: 'FontAwesome';
+    content: '\f101';
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    float: left;
+}
+thead {
+    background: linear-gradient(270deg, #018C4B -2.64%, #01787C 100%) !important;
+    /* background-color: #2BB9A2; */
+    /* background-color: #155384; */
+}
+table {
+    /* width: max-content; */
+}
+#tableinfo table thead, #circulartableinfo table thead {
+    background-color: #0167B1 !important;
+    color: #fff;
+}
+thead tr th {
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+tbody tr td {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 4px;
+}
+/* #tableinfo table thead tr th:nth-child(2) {
+    width: 150px;
+} */
+tbody tr:nth-child(even) { 
+    background-color: rgb(237, 249, 253); 
+}
+
+fieldset {
+    border: 2px solid #018C4B !important;
+    /* border: 2px solid gray !important;
+    border-radius: 3px;
+    padding: 17px !important; */
+    /* width: 400px; */
+}
+legend {
+    background: #004085;
+    padding: 4px 22px!important;
+    border-radius: 3px;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 0px!important;
+  }
+  .form-heading {
+    color: #193567;
+    font-weight: 600;
+    font-size: 20px;
+}
+hr {
+    border-color: #193567;
+}
+.previewLabelName {
+    font-weight: 600;
+    font-size: 14px;
+}
+.previewLabelValue {
+    font-weight: 500;
+    font-size: 14px;
+    /* text-transform: capitalize; */
+    word-wrap: break-word;
+}
+.viewbutton {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0.3rem;
+    border-radius: 4px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+    background-color: #193567;
+    border-color: #193567;
+}
+@media screen and (max-width: 768px) {
+    .modal-body .col-md-1 {
+        display: none;
+    }
+}

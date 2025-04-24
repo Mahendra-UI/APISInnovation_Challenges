@@ -1,0 +1,918 @@
+<!-- home alert starts -->
+
+
+
+<div class="modal fade alertModal" id="myModal" *ngIf="closeBtn" style="display: none;opacity: 1; background: rgba(0,0,0,0.8);" id="modal-subscribe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-dialog-centered modal-lg my-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header border-0 p-0" style="background: #004982;">
+                <button type="button" class="close" data-dismiss="modal" 
+                (click)="closeBtn = false" aria-label="Close">
+                <!-- <span aria-hidden="true">&times;</span> -->
+                <i class="fa fa-times"
+                aria-hidden="true"></i>
+            </button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <style>
+
+.modal-header {
+background: #11558a;
+}
+.modal-content {
+border:none;
+}
+.modal-dialog .modal-content .close span {
+margin: 0;
+display: block;
+}
+.modal_content {
+    box-shadow: 1px 0px 10px 2px rgb(0 0 0 / 12%), 1px 0px 10px 2px #dee2e661;
+}
+.modal-dialog .modal-content .close {
+color: #11558a;
+padding: 0;
+background-color: #1beba1;
+font-size: 33px;
+line-height: 22px;
+height: 50px;
+width: 50px;
+opacity: 1;
+border-radius: 50%;
+box-shadow: 0 0 5px #555;
+position: absolute;
+left: auto;
+right: -7px;
+top: -7px;
+z-index: 1;
+transition: all 0.3s;
+}
+                
+            </style>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-md-2">
+                            <img src="assets/images/popup.png" alt="image" class="img-fluid">
+                        </div>
+                        <div class="col-md-10">
+                            <p class="m-0">
+                                Join us for the Master Class on 07.10.2022 at 11:00 AM for a deep session on the problem statements to be addressed in the Fintech Innovation Challenge Program 2022.
+                            </p>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-md-12">
+                            <div class="actions modal_actions">
+                                <a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_NTg0YzVhNTgtMzE4OS00MTM4LTg0NTAtNjEwYjU5ZWRmZDE0%40thread.v2/0?context=%7b%22Tid%22%3a%22d61e24d6-d2ea-4045-9ddc-06cd21e6a149%22%2c%22Oid%22%3a%227e2b942d-618f-4446-bffc-1d92e532e57c%22%7d" target="_blank" style="cursor: pointer;" class="m-0 pulse-button btn enroll_button text-center text-white">Join Us</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- home alert ends -->
+
+
+
+<!-- <app-headertwo></app-headertwo> -->
+
+<!-- <app-header></app-header> -->
+<section class="herobg" style="background-image: url('assets/images/homebgfive.jpeg');">
+<!-- <section class="herobg" style="background-image: url('assets/images/homebg.png');"> -->
+    <!-- <app-headertwo></app-headertwo> -->
+    <div class="container d-none">
+        <div class="row align-items-center">
+            <div class="col-md-5">
+                <div class="website_logo">
+                    <img src="assets/images/logo/apis.png" alt="APIS Logo"
+                        class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="register_button float-end">
+                    <button class="btn btn-success btn-md">
+                        Register Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row pt-3">
+            <div class="col-md-4">
+                <img src="assets/images/bannerthumbwithoutbg.png" alt="image" class="img-fluid" style="width: -webkit-fill-available;">
+                <div class="actions text-center py-3">
+                    <style>
+                        .actions .enroll_button {
+                            /* border: 2px solid #028C72; */
+                            /* background: #d7aa2b;
+                            padding: 20px 0;
+                            width: -webkit-fill-available; */
+                            background: #1ab51a;
+                        padding: 8px 0;
+                        width: 42%;
+                        border-radius: 30px;
+                        margin-top: 20px;
+                        }
+                        .modal_actions .enroll_button {
+                            /* border: 2px solid #028C72; */
+                            /* background: #d7aa2b;
+                            padding: 20px 0;
+                            width: -webkit-fill-available; */
+                            background: #1ab51a;
+                        padding: 4px 0;
+                        width: 13%;
+                        border-radius: 30px;
+                        /* margin-top: 20px; */
+                        float: right;
+                        font-size: 14px;
+                        }
+                        .social_img img {
+                          background-image: url('assets/images/socialiconbg.png');
+                        }
+                        .social_img img:hover {
+                          background-image: url('assets/images/socialiconbghover.png');
+                        }
+                    </style>
+                    <style>
+                        .pulse-button {
+
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(90, 153, 212, 0.5);
+  -webkit-animation: pulse 1.5s infinite;
+}
+
+.pulse-button:hover {
+  -webkit-animation: none;
+}
+@keyframes pulse {
+    0% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+        opacity: 0;
+    }
+}
+
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(26, 181, 26, 0.3), 0 0 0 0em rgba(26, 181, 26, 0.3), 0 0 0 0em rgba(26, 181, 26, 0.3), 0 0 0 0em rgba(26, 181, 26, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 0 1em rgba(26, 181, 26, 0.3), 0 0 0 0em rgba(26, 181, 26, 0.3), 0 0 0 2em rgba(26, 181, 26, 0.3), 0 0 0 0em rgba(26, 181, 26, 0);
+    }
+}
+/* 
+@-webkit-keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 84, 33, 0.3), 0 0 0 1em rgba(255, 84, 33, 0.3), 0 0 0 3em rgba(255, 84, 33, 0.3), 0 0 0 5em rgba(255, 84, 33, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 0 1em rgba(255, 84, 33, 0.3), 0 0 0 3em rgba(255, 84, 33, 0.3), 0 0 0 5em rgba(255, 84, 33, 0.3), 0 0 0 8em rgba(255, 84, 33, 0);
+    }
+} */
+
+
+@-webkit-keyframes pulse {
+  0% {
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  70% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(90, 153, 212, 0);
+  }
+  100% {
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
+  }
+}
+
+                    </style>
+<span class='pulse-button d-none'>pulse</span>
+
+<!-- data-toggle="modal" data-target="#registrationModal" -->
+
+<a href="https://app.thebizplanner.com/public/application/inc/63186b45647d6d9f9e518110" target="_blank" style="cursor: pointer;" class="pulse-button btn enroll_button text-center text-white text-uppercase">Closed</a>
+                </div> 
+                <div class="table-responsive mt-2">
+                    <table class="table-borderless">
+                        <tbody>
+                            <tr>
+                                <th><i class="fa fa-map-marker fa-2x"></i></th>
+                                <!-- <th>-</th> -->
+                                <td style="font-size: 18px;">Visakhapatnam, Andhra Pradesh</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="pl-0" style="padding-left: 0 !important;">
+                                    <div class="d-flex align-items-center">
+                                        <div class="fb social_img">
+                                            <a href="https://www.facebook.com/" target="_blank">
+                                                <img src="assets/images/facebook.png" alt="FB Logo" class="img-fluid">
+                                            </a>
+                                        </div>
+                                        <div class="linkedin social_img">
+                                            <a href="https://www.linkedin.com/" target="_blank">
+                                                <img src="assets/images/linkedin.png" alt="Linkedin Logo" class="img-fluid">
+                                            </a>
+                                        </div>
+                                        <div class="twitter social_img">
+                                            <a href="https://twitter.com/" target="_blank">
+                                                <img src="assets/images/twitter.png" alt="Twitter Logo" class="img-fluid">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </td>
+    
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+
+
+
+
+                <div class="event_details">
+                    <div class="event_name_details">
+                        <!-- <i class="fa fa-calendar"></i> -->
+                        <!-- <h4>Event Name</h4> : -->
+                        <h2 style="color: orange !important;">Fintech Innovation Challenge 2022</h2>
+                    </div>
+
+                    
+                </div>
+
+
+                <!-- event table starts -->
+
+                <div class="table-responsive">
+                    <table class="table-borderless">
+                        <tbody>
+                            <tr>
+                                <th colspan="2">
+                                    <i class="fa fa-handshake-o fa-2x" aria-hidden="true"></i>
+                                </th>
+
+                                <!-- <th colspan="2">
+                                    <i class="fa fa-handshake fa-2x"></i>
+                                </th> -->
+                                <!-- <th>-</th> -->
+                                <!-- <td>APIS in partnership with APCFSS & FINBLUE CoE by STPI, Chennai</td> -->
+                                <td>
+                                    APIS jointly organizing in partnership with APCFSS & FINBLUE STPI CoE, Chennai
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <th colspan="2">
+                                    <i class="fa fa-trophy fa-2x" aria-hidden="true"></i>
+                                    <!-- <i class="fa fa-trophy fa-2x"></i> -->
+                                </th>
+
+                                <!-- <th colspan="2"><i class="fa fa-trophy fa-2x"></i></th> -->
+                                <!-- <th>-</th> -->
+                                <!-- <td>Upto <span>Rs. 17.5 Lakhs</span> to be won between the <span>top 3 teams</span></td> -->
+                                <td>Upto <span>INR 50 Lakhs</span> to be won between the <span>Winners, 1st Runners & 2nd Runners</span></td>
+
+                            </tr>
+                            <!-- <tr>
+                                <td colspan="3">
+                                    <div class="d-flex">
+                                        <div>
+                                            <i class="fas fa-calendar-alt fa-2x mr-4"></i> Start Date: 01-05-2022 &nbsp;&nbsp;
+                                        </div>
+                                        <div class="ml-5 pl-5">
+                                            <i class="fas fa-calendar-alt fa-2x mr-4"></i> End Date: 01-05-2022
+                                        </div>
+                                    </div>
+                                </td>
+                            <tr> -->
+                        </tbody>
+                    </table>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <!-- <i class="fas fa-calendar-alt fa-2x"></i>  -->
+                                <th colspan="2">Start Date</th>
+                                <!-- <th>-</th> -->
+                                <td>
+                                     19-09-2022
+                                </td>
+                            <tr>
+                            <tr>
+                                <th colspan="2">End Date</th>
+                                <!-- <th>-</th> -->
+                                <td>
+                                     21-11-2022
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <!-- <app-countdown></app-countdown> -->
+                    <table class="tabl-borderless mt-3">
+                        <tbody>
+                            <tr>
+                                <th colspan="3"><div style="width: max-content;">Ecosystem Partners</div></th>
+                                <!-- <th>-</th> -->
+                                <td>
+                                    <div class="d-flex align-items-center">
+
+                                        <img src="assets/images/logo/meityhub.png" alt="image" class="img-fluid" style="width: 15%;background: #F7F7F7;margin-right: 20px;">
+                                        <img src="assets/images/logo/startupindianew.jpeg" alt="image" class="img-fluid" style="width: 22%">
+
+                                        <!-- <a href="https://meitystartuphub.in/" target="_blank">
+                                            <img src="assets/images/logo/meityhub.png" alt="image" class="img-fluid" style="width: 15%;background: #F7F7F7;margin-right: 20px;">
+                                        </a>
+                                        <a href="https://www.startupindia.gov.in/" target="_blank">
+                                            <img src="assets/images/logo/startupindianew.jpeg" alt="image" class="img-fluid" style="width: 22%">
+                                        </a> -->
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="partners d-none">
+                    <h4 class="text-white">Ecosystem Partners:</h4>
+                    <img src="assets/images/logo/meityhub.png" alt="image" class="img-fluid" style="width: 10%;">
+                    <img src="assets/images/logo/startupindia.png" alt="image" class="img-fluid">
+                </div>
+
+                <!-- event table ends -->
+
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+<!-- background section starts -->
+
+<app-commonsection></app-commonsection>
+
+<!-- <app-background></app-background> -->
+
+
+
+
+<!-- problem statements section starts -->
+
+<app-problemstatementsone></app-problemstatementsone>
+
+<!-- problem statements section ends -->
+
+<!-- background section ends -->
+
+<app-timelineprocesstwo></app-timelineprocesstwo>
+<!-- about fintech challenge section starts -->
+
+<!-- <app-aboutfintechchallenge></app-aboutfintechchallenge> -->
+
+<!-- about fintech challenge section ends -->
+
+<app-participateone></app-participateone>
+
+<!-- <app-winnertwo></app-winnertwo> -->
+
+<app-winnerthree></app-winnerthree>
+<!-- <app-winnerone></app-winnerone> -->
+
+<!-- to be a incentives section ends -->
+
+<!-- nonfiscal section starts -->
+
+<!-- <app-newcomponent></app-newcomponent> -->
+
+<!-- nonfiscal section ends -->
+
+<!-- organized partners section starts -->
+
+<app-keypartners></app-keypartners>
+
+<!-- organized partners section ends -->
+
+<!-- upcoming events section starts -->
+<app-upcomingeventstwo></app-upcomingeventstwo>
+<!-- <app-events></app-events> -->
+<!-- <app-upcomingevents></app-upcomingevents> -->
+<!-- starategic partners starts -->
+
+<!-- <app-strategicpartners></app-strategicpartners> -->
+
+<!-- Ecosystem partners ends -->
+<!-- upcoming events section ends -->
+
+<!-- to be a invesntives section starts -->
+
+
+
+
+
+<!-- hosted by section starts -->
+
+<app-organizedone></app-organizedone>
+
+<!-- hosted by section ends -->
+
+<!-- faq section starts -->
+
+<app-faqone></app-faqone>
+
+<!-- faq section ends -->
+
+
+<section class="d-none">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                section Name : Background an About Fintech Innovation Challenge and journey, problem statements (with paragraph text  with know more)
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="modal fade" id="registrationModal" data-backdrop="static"
+    data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="registrationModalLabel">Challenge Accepted ?</h4>
+                <button type="button" class="btn-close" data-dismiss="modal"
+                    aria-label="Close"><i class="fa fa-times"
+                    aria-hidden="true"></i></button>
+            </div>
+            <div class="modal-body">
+<form [formGroup]="RegForm" (ngSubmit)="onSubmit()">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center py-3" style="color: #1fbcb4;">
+                         Fill in details to submit your application
+                    </p>
+                </div>
+                <div class="col-md-12">
+                    <!-- <div class="stmt_title">
+                        <h3>Application Form</h3>
+                    </div> -->
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputName">Name</label>
+                        <input type="text" class="form-control" id="applicantName" placeholder="Please enter Name"
+                            [ngClass]="{'is-invalid':
+                            govformcontrols.applicantName.touched
+                            && govformcontrols.applicantName.errors }" formControlName="applicantName">
+                        <span class="text-danger" *ngIf="(govformcontrols.applicantName.touched ||
+                            submitted) &&
+                            govformcontrols.applicantName.errors?.required">
+                            Name is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputName">Participation Type</label>
+                        <br>
+                        <label>
+                        <input type="radio" name="participateType" value="Ideation"
+                            formControlName="participateType" (click)="participateTypeEvent($event)">
+                        Ideation</label>
+                        <label>
+                        <input type="radio" class="ml-3" name="participateType" value="Deployment"
+                            formControlName="participateType" (click)="participateTypeEvent($event)">
+                        Deployment</label><br>
+
+                        <span class="text-danger" *ngIf="(govformcontrols.participateType.touched ||
+                            submitted) &&
+                            govformcontrols.participateType.errors?.required">
+                            Participation Type is required
+                        </span>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-6" *ngIf="ideationTypeSection">
+                    <div class="form-group">
+                        <label for="inputName">Ideation Type</label>
+                        <br>
+                        <label>
+                        <input type="radio" name="ideationType" value="1"
+                            formControlName="ideationType" (click)="ideationTypeCheck($event)">
+                        Researcher</label>
+                        <label>
+                        <input class="ml-2" type="radio" name="ideationType" value="2" formControlName="ideationType"
+                            (click)="ideationTypeCheck($event)">
+                        Student</label>
+                        <label>
+                        <input class="ml-2" type="radio" name="ideationType" value="3"
+                            formControlName="ideationType" (click)="ideationTypeCheck($event)">
+                        Faculties</label><br>
+
+                        <span class="text-danger" *ngIf="(govformcontrols.ideationType.touched ||
+                            submitted) &&
+                            govformcontrols.ideationType.errors?.required">
+                            Ideation Type is required
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6" *ngIf="deploymentTypeSection">
+                    <div class="form-group">
+                        <label for="inputName">Deployment Type</label>
+                        <br>
+                        <label>
+                        <input type="radio" name="deploymentType" value="4"
+                            formControlName="deploymentType" (click)="deploymentTypeCheck($event)">
+                        Indian Companies</label>
+                        <label class="px-3">
+                        <input type="radio" name="deploymentType" value="5"
+                            formControlName="deploymentType" (click)="deploymentTypeCheck($event)">
+                        Startup</label>
+                        <label>
+                        <input type="radio" name="deploymentType" value="7"
+                            formControlName="deploymentType" (click)="deploymentTypeCheck($event)">
+                        MSMEs/LLPs</label>
+                        <label class="px-3">
+                        <input type="radio" name="deploymentType" value="8"
+                            formControlName="deploymentType" (click)="deploymentTypeCheck($event)">
+                        Professionals</label>
+                        <!-- <label>  <input type="radio" name="deploymentType" value="9"
+                                formControlName="deploymentType" (click)="deploymentTypeCheck($event)">
+                            Others</label> -->
+                            <br>
+
+                        <span class="text-danger" *ngIf="(govformcontrols.deploymentType.touched ||
+                            submitted) &&
+                            govformcontrols.deploymentType.errors?.required">
+                            Deployment Type is required
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6" *ngIf="startupSection">
+                    <div class="form-group">
+                        <label for="inputName">Startup Type</label>
+                        <br>
+
+                        <input type="radio" id="html" name="startupType" value="Registered"
+                            formControlName="startupType" (click)="statupTypeCheck($event)">
+                        &nbsp;<label for="html">Registered</label>
+                        <input class="ml-2" type="radio" id="css" name="startupType" value="Not registered"
+                            formControlName="startupType" (click)="statupTypeCheck($event)">
+                        &nbsp;<label for="css">Not Registered</label><br>
+
+                        <span class="text-danger" *ngIf="(govformcontrols.startupType.touched ||
+                            submitted) &&
+                            govformcontrols.startupType.errors?.required">
+                            Startup Type is required
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputDate">Problem Statement</label>
+                        <select class="form-control" id="problemStatement" placeholder="problemStatement"
+                         [ngClass]="{'is-invalid':
+                            govformcontrols.problemStatement.touched &&
+                            govformcontrols.problemStatement.errors }" formControlName="problemStatement">
+                            <option value="">Select Problem Statement</option>
+                            <option value="1">Problem Statement 1</option>
+                            <option value="2">Problem Statement 2</option>
+                            <option value="3">Problem Statement 3</option>
+                            <option value="4">Problem Statement 4</option>
+                            <option value="5">Problem Statement 5</option>
+
+                        </select>
+                        <span class="text-danger" *ngIf="(govformcontrols.problemStatement.touched || submitted)
+                            && govformcontrols.problemStatement.errors?.required">
+                            Problem Statement Selection is required
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputName">Name of {{nameOfOrg}}</label>
+                        <input type="text" formControlName="nameOfOrganization" class="form-control"
+                            placeholder="Name of {{nameOfOrg}}" [ngClass]="{ 'is-invalid':
+                            govformcontrols.nameOfOrganization.touched &&
+                            govformcontrols.nameOfOrganization.errors }" />
+                        <span class="text-danger" *ngIf="(govformcontrols.nameOfOrganization.touched
+                            || submitted) &&
+                            govformcontrols.nameOfOrganization.errors?.required">
+                            Name of {{nameOfOrg}} is required
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-md-6" *ngIf="deploymentExtraSection">
+                    <div class="form-group">
+                        <label for="inputName">Year Established</label>
+                        <input type="text" formControlName="yearEstablished" minlength="4" maxlength="4" class="form-control"
+                            placeholder="Year Established" [ngClass]="{ 'is-invalid':
+                            govformcontrols.yearEstablished.touched &&
+                            govformcontrols.yearEstablished.errors }" (keypress)="numberOnly($event)"/>
+                        <span class="text-danger" *ngIf="(govformcontrols.yearEstablished.touched
+                            || submitted) &&
+                            govformcontrols.yearEstablished.errors?.required">
+                            Year Established is required <br>
+                        </span>
+
+                        <span class="text-danger"
+                            *ngIf="(govformcontrols.yearEstablished.touched || submitted)
+                             && govformcontrols.yearEstablished.errors?.minlength">
+                            Please input valid year<br>
+                        </span>
+                        <span class="text-danger"
+                            *ngIf="govformcontrols.yearEstablished.errors?.pattern">
+                            Only numbers accepted
+                        </span>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6" *ngIf="deploymentExtraSection">
+                    <div class="form-group">
+                        <label for="inputName">Is GST registered in Andhra
+                            Pradesh?</label>
+                        <br>
+
+                        <input type="radio" id="html" name="gstRegistrated" value="true" formControlName="gstRegistrated"
+                            (click)="gstRegistratedCheck($event)">
+                        <label for="html">Yes</label>
+                        <input type="radio" id="css" name="gstRegistrated" value="false" formControlName="gstRegistrated"
+                            (click)="gstRegistratedCheck($event)">
+                        <label for="css">No</label>
+                            <br>
+                        <span class="text-danger" *ngIf="(govformcontrols.gstRegistrated.touched ||
+                            submitted) &&
+                            govformcontrols.gstRegistrated.errors?.required">
+                            GST selection is required
+                        </span>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputName">Location</label>
+                        <input type="text" class="form-control" id="location" placeholder="Please enter location"
+                            [ngClass]="{'is-invalid':
+                            govformcontrols.location.touched &&
+                            govformcontrols.location.errors }" formControlName="location">
+                        <span class="text-danger" *ngIf="(govformcontrols.location.touched ||
+                            submitted) &&
+                            govformcontrols.location.errors?.required">
+                            Location is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputDate">State</label>
+                        <select class="form-control" id="state" placeholder="state" [ngClass]="{'is-invalid':
+                            govformcontrols.state.touched &&
+                            govformcontrols.state.errors }" formControlName="state">
+                            <option value="">Select</option>
+                            <option *ngFor="let item of statesArray" [value]="item.state_code">{{item.state_name}}</option>
+                        </select>
+                        <span class="text-danger" *ngIf="(govformcontrols.state.touched || submitted)
+                            && govformcontrols.state.errors?.required">
+                            State is required
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-md-6" *ngIf="studentFieldsShow">
+                    <!-- <div class="form-group">
+                        <label for="inputName">Education</label>
+                        <select class="form-control" id="education" placeholder="state" [ngClass]="{'is-invalid':
+                            govformcontrols.education.touched &&
+                            govformcontrols.education.errors }" formControlName="education">
+                            <option>Select</option>
+                            <option>B.Tech</option>
+                        </select>
+                        <span class="text-danger" *ngIf="(govformcontrols.education.touched ||
+                            submitted) &&
+                            govformcontrols.education.errors?.required">
+                            Education is required
+                        </span>
+                    </div> -->
+
+                    <div class="form-group">
+                        <label for="inputName">Education</label>
+                        <input type="text" class="form-control" id="education" placeholder="Please enter Education" [ngClass]="{'is-invalid':
+                            govformcontrols.education.touched &&
+                            govformcontrols.education.errors }" formControlName="education">
+                        <span class="text-danger" *ngIf="(govformcontrols.education.touched || submitted)
+                            && govformcontrols.education.errors?.required">
+                            Education is required
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-6" *ngIf="studentFieldsShow">
+                    <div class="form-group">
+                        <label for="inputName">Education Year</label>
+                        <input type="text" class="form-control" id="year" placeholder="Please enter Education Year" [ngClass]="{'is-invalid':
+                            govformcontrols.year.touched &&
+                            govformcontrols.year.errors }" formControlName="year">
+                        <span class="text-danger" *ngIf="(govformcontrols.year.touched || submitted)
+                            && govformcontrols.year.errors?.required">
+                            Education Year is required
+                        </span>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-6" *ngIf="researcherFieldsShow">
+                    <div class="form-group">
+                        <label for="inputName">Research Type</label>
+                        <input type="text" class="form-control" id="typeResearch"
+                            placeholder="Please enter Research Type" [ngClass]="{'is-invalid':
+                            govformcontrols.typeResearch.touched &&
+                            govformcontrols.typeResearch.errors }" formControlName="typeResearch">
+                        <span class="text-danger" *ngIf="(govformcontrols.typeResearch.touched ||
+                            submitted) &&
+                            govformcontrols.typeResearch.errors?.required">
+                            Research Type is required
+                        </span>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputName">Email Id</label>
+                        <input type="email" class="form-control" id="emailId" placeholder="Please enter Email Id"
+                            [ngClass]="{'is-invalid': govformcontrols.emailId.touched && govformcontrols.emailId.errors }"
+                            formControlName="emailId" >
+                        <span class="text-danger"
+                            *ngIf="(govformcontrols.emailId.touched || submitted) && govformcontrols.emailId.errors?.required">
+                            Email Id is required
+                        </span>
+                        <div class="text-danger" *ngIf="govformcontrols.emailId.errors?.email">Email must be a valid email address</div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
+
+
+                    <div class="form-group">
+                        <label for="inputName">Phone Number</label>
+                        <input type="text" class="form-control" id="phoneNum" placeholder="Please enter Phone Number"
+                            [ngClass]="{'is-invalid': govformcontrols.phoneNum.touched && govformcontrols.phoneNum.errors }"
+                            formControlName="phoneNum" minlength="10" maxlength="10" (keypress)="numberOnly($event)">
+                        <span class="text-danger"
+                            *ngIf="(govformcontrols.phoneNum.touched || submitted) && govformcontrols.phoneNum.errors?.required">
+                            Phone Number is required<br>
+                        </span>
+                        
+                        <span class="text-danger"
+                            *ngIf="(govformcontrols.phoneNum.touched || submitted) && govformcontrols.phoneNum.errors?.minlength">
+                            Please input valid mobile number<br>
+                        </span>
+                        
+                    
+                        <span class="text-danger"
+                            *ngIf="govformcontrols.phoneNum.errors?.pattern">
+                            Only numbers accepted
+                        </span>
+                    </div>
+
+                    
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputName">Address</label>
+                        <textarea type="text" class="form-control" id="address" placeholder="Please enter Address"
+                            [ngClass]="{'is-invalid':
+                            govformcontrols.address.touched &&
+                            govformcontrols.address.errors }" formControlName="address">
+                    </textarea>
+                        <span class="text-danger" *ngIf="(govformcontrols.address.touched ||
+                            submitted) &&
+                            govformcontrols.address.errors?.required">
+                            Address is required
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputName">Aadhar Number</label>
+                        <input type="text" class="form-control" id="aadharNumber"
+                            placeholder="Please enter Aadhar Number" [ngClass]="{'is-invalid':
+                            govformcontrols.aadharNumber.touched &&
+                            govformcontrols.aadharNumber.errors }" formControlName="aadharNumber"
+                            (blur)="validateAadhar($event)" maxlength="12" minlength="12" (keypress)="numberOnly($event)">
+                        <span class="text-danger" *ngIf="(govformcontrols.aadharNumber.touched ||
+                            submitted) &&
+                            govformcontrols.aadharNumber.errors?.required">
+                            Aadhar Number is required <br>
+                        </span>
+                        <span class="text-danger" *ngIf="govformcontrols.aadharNumber.errors?.pattern">
+                            Only Numbers allowed
+                        </span>
+                    </div>
+                </div>
+
+                <!-- <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="inputName">Problem Statement</label>
+                        <select class="form-control" id="problemStatement"
+                            placeholder="state"
+                            [ngClass]="{'is-invalid':
+                            govformcontrols.problemStatement.touched &&
+                            govformcontrols.problemStatement.errors }"
+                            formControlName="problemStatement">
+                            <option>Select</option>
+                            <option>Statement 1</option>
+                            <option>Statement 3</option>
+                        </select>
+                        <span class="text-danger"
+                            *ngIf="(govformcontrols.problemStatement.touched ||
+                            submitted) &&
+                            govformcontrols.problemStatement.errors?.required">
+                            Problem Statement is required
+                        </span>
+                    </div>
+                </div> -->
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div class="d-flex">
+                            <div>
+                                <label for="inputPhoto">Document</label>
+                                <input type="file" class="form-control attachcontrol" id="inputDocument" formControlName="document"
+                                    placeholder="document" [ngClass]="{'is-invalid':
+                                    govformcontrols.document.touched &&
+                                    govformcontrols.document.errors }" placeholder="document"
+                                    (change)="fileUpload($event)" accept=".pdf, .pptx">
+                                <span class="text-danger" *ngIf="(govformcontrols.document.touched ||
+                                    submitted) &&
+                                    govformcontrols.document.errors?.required">
+                                    Document is required
+                                </span>
+                                <h6 class="text-danger"><strong>Note: </strong>
+                                     Supported formats are (.pdf, .ptt) and max file size limit is 10MB
+                                </h6>
+                            </div>
+                            <div class="pl-2">
+                                <iframe *ngIf="iFrameDisplay" [src]="downloadUrl" class="image" width="200"
+                                    height="200"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="action_button float-right py-3">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</form>
+</div>
+<!-- <div class="modal-footer">
+    <button type="button" class="btn btn-secondary"
+        data-dismiss="modal">Close</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</div> -->
+
+</div>
+</div>
+</div>

@@ -1,0 +1,50 @@
+/* Be a Winner Section css starts */
+.section_title {
+    text-align: center;
+  }
+  section {
+    padding: 40px 0;
+  }
+  .section_content {
+    width: 75%;
+    max-width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+  .section_content p {
+    text-align: center;
+  }
+  .winner_boxes {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    margin: 10px;
+  }
+  .winner_boxes .box {
+    width: 45%;
+    padding: 30px 0;
+    margin: 4px;
+  }
+  .winner_boxes .box:nth-child(1) {
+    background-color: #00AD8C;
+  }
+  .winner_boxes .box:nth-child(2) {
+    background-color: #41A9FF;
+  }
+  .winner_boxes .box:nth-child(3) {
+    background-color: #FF4169;
+  }
+  .winner_boxes .box:nth-child(4) {
+    background-color: #724FFF;
+  }
+  .winner_boxes .box .box_heading h4 {
+    color: #fff;
+    text-align: center;
+  }
+  .winner_boxes .box .box_content p {
+    color: #fff;
+    text-align: center;
+  }
+
+  /* Be a Winner Section css ends */

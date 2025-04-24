@@ -1,0 +1,419 @@
+
+<section class="banner_section" style="background-image: url('assets/images/cybersecurity/cyber_innerbanner.jpg');">
+    <!-- <app-headertwo></app-headertwo> -->
+    
+        <div class="container">
+            <style>
+                .section_title h2::after {
+                    content: none !important;
+                }
+            </style>
+            <div class="section_title commontitle text-left">
+                <h2 style="color: orange;">
+                    cyber security innovation challenge 2023
+                </h2>
+            </div>
+            
+        </div>
+    </section>
+<style>
+    .card-body {
+        box-shadow: 0px 0px 25px 0px #00000012;
+        /* box-shadow: 0 0 10px #155384; */
+    }
+    .custom_class {
+    margin-top: -150px;
+}
+    .card {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right;
+    }
+</style>
+<section class="mb-5 custom_class" style="position: relative;z-index: 9;">
+    <div class="container">
+        <div class="card card-body p-4" style="background-image: url('assets/images/cybersecurity/problem_bg.png');">
+            <!-- <div class="card card-body p-4">
+                <div class="text-center py-5">
+                    <h4>Applications are Closed</h4>
+                </div> -->
+        <form class="mb-3" [formGroup]="challengesForm" (ngSubmit)="onSubmitChallengeForm()">
+            <div class="row">
+                <!-- <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="" class="form-label">Challenges <span class="mandatory">*</span></label>
+                        <select name="" id="" class="form-select" formControlName="challengeName">
+                            <option selected disabled>--Select--</option>
+                            <option *ngFor="let li of challengesList" value={{li?.id}}> {{li?.challenge_name}}</option>
+                        </select>
+                        <div *ngIf="challengesFormCtrls['challengeName'].touched || submitted">
+                            <div *ngIf="challengesFormCtrls['challengeName'].hasError('required')" class="text-danger">
+                                Challenge Name is Required
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="" class="form-label">Full Name <span class="mandatory">*</span></label>
+                        <input type="text" formControlName="fullName" class="form-control" />
+                        <div *ngIf="challengesFormCtrls['fullName'].touched || submitted">
+                            <div *ngIf="challengesFormCtrls['fullName'].hasError('required')" class="text-danger">
+                                Full Name is Required
+                            </div>
+                        </div>
+                        <div *ngIf="challengesFormCtrls['fullName'].hasError('pattern')" class="text-danger">
+                            Please Enter Valid Name
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="" class="form-label">Email ID <span class="mandatory">*</span></label>
+                        <input type="email" class="form-control" formControlName="emailId" [attr.disabled]="editMode ? true : null" (blur)="checkEmail($event)">
+                        <div *ngIf="challengesFormCtrls['emailId'].touched || submitted">
+                            <div *ngIf="challengesFormCtrls['emailId'].hasError('required')" class="text-danger">
+                                Email ID is Required</div>
+                        </div>
+                        <div class="text-danger" *ngIf="challengesFormCtrls['emailId'].hasError('pattern')">
+                            Enter Valid Email ID
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="" class="form-label">Mobile No. <span class="mandatory">*</span></label>
+                        <input type="text" maxlength="10" minlength="10" class="form-control"
+                            formControlName="mobileNo" (keypress)="numberOnly($event)">
+                        <div *ngIf="challengesFormCtrls['mobileNo'].touched || submitted">
+                            <div *ngIf="challengesFormCtrls['mobileNo'].hasError('required')" class="text-danger">
+                                Mobile No. is Required</div>
+                        </div>
+                        <div class="text-danger" *ngIf="challengesFormCtrls['mobileNo'].hasError('minlength')">
+                            Mobile Number must be at least 10 characters long.
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="" class="form-label">Alternate Email ID </label>
+                        <input type="email" class="form-control" formControlName="alternameEmailId">
+                        <div class="text-danger" *ngIf="challengesFormCtrls['alternameEmailId'].hasError('pattern')">
+                            Enter Valid Email ID
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="" class="form-label">Designation <span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="designation">
+                        <div *ngIf="challengesFormCtrls['designation'].touched || submitted">
+                            <div *ngIf="challengesFormCtrls['designation'].hasError('required')" class="text-danger">
+                                Designation is Required
+                            </div>
+                        </div>
+                        <div *ngIf="challengesFormCtrls['designation'].hasError('pattern')" class="text-danger">
+                            Please Enter Valid Name
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="" class="form-label">Startup Name <span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="startupName">
+                        <div *ngIf="challengesFormCtrls['startupName'].touched || submitted">
+                            <div *ngIf="challengesFormCtrls['startupName'].hasError('required')" class="text-danger">
+                                Startup Name is Required
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="" class="form-label">Type of Entity <span class="mandatory">*</span></label>
+                        <select name="" id="" class="form-select" formControlName="typeOfEntity">
+                            <option value="" selected disabled>--Select--</option>
+                            <option *ngFor="let li of entityList" value={{li?.id}}> {{li?.entity_name}}</option>
+                        </select>
+                        <div *ngIf="challengesFormCtrls['typeOfEntity'].touched || submitted">
+                            <div *ngIf="challengesFormCtrls['typeOfEntity'].hasError('required')" class="text-danger">
+                                Type of Entity is Required
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="" class="form-label">Year of Corporation <span class="mandatory">*</span></label>
+
+                        <input type="text" maxlength="4" minlength="4" class="form-control"
+                            formControlName="yearOfCorporation" (keypress)="numberOnly($event)" (blur)="checkYear()">
+                        <div *ngIf="challengesFormCtrls['yearOfCorporation'].touched || submitted">
+                            <div *ngIf="challengesFormCtrls['yearOfCorporation'].hasError('required')" class="text-danger">
+                                Year of Corporation is Required
+                            </div>
+                        </div>
+                        <div class="text-danger" *ngIf="challengesFormCtrls['yearOfCorporation'].hasError('minlength')">
+                            Year of Corporation must be at least 4 characters long.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="" class="form-label">Startup Registered State <span
+                                class="mandatory">*</span></label>
+                        <select name="" id="" class="form-select" formControlName="registeredState">
+                            <option value="" selected disabled>--Select--</option>
+                            <option *ngFor="let li of statesList" value="{{li?.id}}">{{li?.state_name}}</option>
+                        </select>
+                        <div *ngIf="challengesFormCtrls['registeredState'].touched || submitted">
+                            <div *ngIf="challengesFormCtrls['registeredState'].hasError('required')" class="text-danger">
+                                Registered State is Required
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="" class="form-label">City/Town <span class="mandatory">*</span></label>
+                        <input type="text" class="form-control" formControlName="cityTown">
+                        <div *ngIf="challengesFormCtrls['cityTown'].touched || submitted">
+                            <div *ngIf="challengesFormCtrls['cityTown'].hasError('required')" class="text-danger">
+                               City/Town is Required
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="" class="form-label">Website URL</label>
+                        <input type="text" class="form-control" formControlName="websiteUrl">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="" class="form-label">Founder/Startup LinkedIn Profile</label>
+                        <input type="text" class="form-control" formControlName="linkedInProfile">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="" class="form-label">Do you have DPIIT Certificate (Startup India
+                            Recognition) <span class="mandatory">*</span></label>
+                        <div class="hstack gap-3">
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" id="Yes" value="Yes" formControlName="dpitCertificate" (click)="onChangeDpiitDetails($event)">
+                                <label class="form-check-label" for="Yes">Yes</label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" id="no" value="no" formControlName="dpitCertificate" (click)="onChangeDpiitDetails($event)">
+                                <label class="form-check-label" for="no">No</label>
+                              </div>
+                        </div>
+                        <div *ngIf="challengesFormCtrls['dpitCertificate'].touched || submitted">
+                            <div *ngIf="challengesFormCtrls['dpitCertificate'].hasError('required')" class="text-danger">
+                               DPIT Certificate is Required
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="" class="form-label">If yes, DPIIT Number</label>
+                        <input type="text" class="form-control" formControlName="dpitNumber">
+                        <div *ngIf="challengesFormCtrls['dpitNumber'].touched || submitted">
+                            <div *ngIf="challengesFormCtrls['dpitNumber'].hasError('required')" class="text-danger">
+                               DPIT Number is Required
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="" class="form-label">What is the current stage of your Startup? <span
+                                class="mandatory">*</span></label>
+                        <select name="" id="" class="form-select" formControlName="currentStageOfStartup">
+                            <option value="" selected disabled>--Select--</option>
+                            <option *ngFor="let li of stagesList" value={{li?.id}}> {{li?.currentstage_name}}</option>
+                        </select>
+                        <div *ngIf="challengesFormCtrls['currentStageOfStartup'].touched || submitted">
+                            <div *ngIf="challengesFormCtrls['currentStageOfStartup'].hasError('required')" class="text-danger">
+                                Current Stage is Required
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="" class="form-label">What is the problem you are solving? <span
+                                class="mandatory">*</span></label>
+                        <select name="" id="" class="form-select" formControlName="problemStamentName">
+                            <option value="" selected disabled>--Select--</option>
+                            <option *ngFor="let li of problemStatementesList" value={{li?.id}}> {{li?.problem_name}}</option>
+                        </select>
+                        <div *ngIf="challengesFormCtrls['problemStamentName'].touched || submitted">
+                            <div *ngIf="challengesFormCtrls['problemStamentName'].hasError('required')" class="text-danger">
+                                Problem Statement is Required
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="" class="form-label">Board Resolution / Authorisation Letter <span
+                                class="mandatory">*</span></label>
+                        <input type="file" class="form-control" (change)="handleBoardLetter($event)" >
+                        <!-- formControlName="boardAuthorizationLetter" -->
+                        <div *ngIf="challengesFormCtrls['boardAuthorizationLetter'].touched || submitted">
+                            <div *ngIf="challengesFormCtrls['boardAuthorizationLetter'].hasError('required')" class="text-danger">
+                                Board Resolution Upload is Required
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="" class="form-label">Upload Pitch Deck (Idea Presentation) <span
+                                class="mandatory">*</span></label>
+                        <input type="file" class="form-control" (change)="handlePitechDeckLetter($event)" >
+                        <!-- formControlName="pitchDeckUpload" -->
+                        <div *ngIf="challengesFormCtrls['pitchDeckUpload'].touched || submitted">
+                            <div *ngIf="challengesFormCtrls['pitchDeckUpload'].hasError('required')" class="text-danger">
+                                Pitch Deck Upload is Required
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="" class="form-label">What is your innovative idea or solution to solve the above
+                            mentioned problem? <span class="mandatory">*</span></label>
+                        <textarea class="form-control" formControlName="innovativeIdea"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="" class="form-label">What is the value proposition for this problem? <span class="mandatory">*</span></label>
+                        <textarea class="form-control custom_form_control" formControlName="propositionValue"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group form-row m-0">
+                        <h2 class="mb-2" style="visibility: hidden;"> hello</h2>
+                        <div class="hstack gap-2 mt-1 pt-2">
+                            <div>
+                                <img [src]="'data:image/jpg;base64,'+imageBase64" width="100" height="50" alt="" />
+                            </div>
+                            <div>
+                                <button type="button" (click)="loadcaptcha();" class="btn btn-primary btn-block btn-sm">
+                                    <i class="fa fa-undo" aria-hidden="true"></i> <small> Refresh</small></button>
+                            </div>
+                            <div>
+                                <input type="text" class="form-control mt-1" formControlName="captchacode" maxlength="6"
+                                    autocomplete="off" placeholder="Captcha Output" required="required">
+                                <!-- <div
+                                    *ngIf="(challengesFormCtrls.captchacode.touched || submitted) && challengesFormCtrls.captchacode.invalid">
+                                    <span class="text-danger" *ngIf="challengesFormCtrls.captchacode.errors.required">
+                                        Captcha is required
+                                    </span>
+                                </div> -->
+
+                                <div *ngIf="(challengesFormCtrls['captchacode'].touched || submitted) && challengesFormCtrls['captchacode'].invalid">
+                                    <div *ngIf="challengesFormCtrls['captchacode'].hasError('required')" class="text-danger">
+                                        Captcha is Required
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="acceptCheckbox"
+                                formControlName="acceptCheck">
+                            <label class="form-check-label" for="acceptCheckbox">
+                                I accept the <a href="" data-bs-toggle="modal" data-bs-target="#termsModal">Terms &
+                                    Conditions</a> <span class="mandatory">*</span>
+                            </label>
+                            <div *ngIf="challengesFormCtrls['acceptCheck'].touched || submitted">
+                                <div *ngIf="challengesFormCtrls['acceptCheck'].hasError('required')" class="text-danger">
+                                    Terms & Conditions is Required
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <!-- data-bs-toggle="modal" data-bs-target="#registerModal" -->
+                    <button type="submit" id="registerBtn" class="btn btn-primary w-auto float-end mb-2"
+                    [disabled]="challengesForm.invalid">Register</button>
+                   <!-- -->
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="termsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="termsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-white" id="termsModalLabel">Terms & Conditions</h5>
+                <button type="button" class="btn-close bg-white opacity-100" data-bs-dismiss="modal"
+                    aria-label="Close">
+                    <i class="bi bi-x-lg"></i>
+                    <!-- <i class="fa fa-times"
+                    aria-hidden="true"></i> -->
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="tersm_content">
+                                <p>
+                                    I hereby acknowledge that I have read and understood the terms and conditions
+                                    governing my participation in the Cyber Security Innovation Challenge 2023.
+                                </p>
+                                <p>
+                                    By submitting this form, I commit to complying with all the rules and regulations
+                                    set forth by the organizers of the Cyber Security Innovation Challenge 2023. I
+                                    understand that failure to adhere to these terms and conditions may result in
+                                    disqualification from the competition.
+                                </p>
+                                <p>
+                                    I further acknowledge that it is my responsibility to stay informed about any
+                                    updates or changes to the terms and conditions throughout the duration of the
+                                    competition.
+                                </p>
+                                <p>
+                                    I am aware that participation in this challenge may require the handling of
+                                    sensitive information and that I am obligated to maintain the highest standards of
+                                    ethical conduct, confidentiality, and security.
+                                </p>
+                                <p>
+                                    I affirm that I am legally eligible to participate in the Cyber Security Innovation
+                                    Challenge 2023 and that all the information I provide is accurate and truthful to
+                                    the best of my knowledge.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

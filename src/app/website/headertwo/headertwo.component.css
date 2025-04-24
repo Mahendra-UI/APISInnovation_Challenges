@@ -1,0 +1,85 @@
+.navbar-toggler:focus {
+    border: 0;
+    outline: none;
+    box-shadow: none;
+}
+.navbar {
+    background-color: #1fbcb4;
+}
+.nav-item a {
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+.nav-item {
+    padding: 6px 14px;
+}
+.dropdown-toggle {
+    color: #fff;
+    background: none;
+    border: 0;
+    font-size: 18px;
+}
+.dropdown-menu a {
+    color: #004982;
+    padding: 4px 14px;
+    border-bottom: 0;
+    font-size: 16px;
+}
+.dropdown-toggle a {
+    font-size: 18px;
+}
+.myclass {
+    background: #1fbcb4;
+    /* background: #001C5A; */
+}
+.applylink {
+    display: none;
+}
+.form-group {
+    margin-bottom: 10px;
+}
+.form-control {
+    border: 1px solid #1fbcb4;
+}
+.stmt_title h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #028C72;
+}
+.attachcontrol {
+    padding: 3px;
+}
+.modal-title {
+    color: #fff;
+}
+.modal-header {
+    background: #001C5A;
+}
+.logo {
+    /* width: 50%; */
+}
+.mobilenav {
+    display: none;
+}
+.webnav {
+    display: block;
+}
+@media screen and (max-width: 1060px) {
+    /* .nav-item {
+        padding: 10px;
+    } */
+}
+@media screen and (max-width: 450px) {
+    .webnav {
+        display: none;
+    }
+    .mobilenav {
+        display: block;
+    }
+}
+
+.linkActive { border-bottom: 2px solid; }

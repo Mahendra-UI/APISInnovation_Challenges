@@ -1,0 +1,95 @@
+
+section {
+    padding: 20px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.section_title {
+    /* margin-bottom: 30px; */
+}
+.section_title h2 {
+    color: #028C72;
+    font-size: 36px;
+    font-weight: 900;
+    /* line-height: 44px; */
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: capitalize;    
+}
+.section_content {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 30px;
+  }
+  .section_content p {
+    color: #333;
+    font-size: 18px;
+    font-weight: 400;
+    /* line-height: 22px; */
+    letter-spacing: 0em;
+    text-align: center;  
+
+  }
+
+
+
+  /* team section starts */
+
+.cards {
+    text-align: center;
+    -moz-box-shadow: 0 0 5px #999;
+    -webkit-box-shadow: 0 0 5px #999;
+    box-shadow: 0 0 5px #999;
+    /* box-shadow: 0 8px 24px 12px #e2e8ed; */
+}
+
+.profilesDetails {
+    background: #1acc8d;
+}
+
+.profilesDetails h4 {
+    margin: 0.6rem auto;
+    font-size: 1rem;
+    color: #004982;
+    font-weight: bold;
+}
+
+.profilesDetails p {
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+.minister img {
+    width: 60%;
+    border: 1px solid #ccc;
+}
+
+.mla1 img {
+    width: 60%;
+}
+
+.mla2 img {
+    width: 60%;
+}
+
+.satish img {
+    width: 61%;
+}
+
+.poonam img {
+    width: 62.2%;
+}
+
+.srilakshmi img {
+    width: 60%;
+}
+
+
+@Media screen and (max-width: 450px) {
+    .profilesDetails {
+        margin-bottom: 20px;
+    }
+}

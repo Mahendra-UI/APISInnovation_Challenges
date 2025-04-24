@@ -1,0 +1,355 @@
+<!-- home alert starts -->
+
+
+
+<div class="modal fade alertModal" id="myModal" *ngIf="closeBtn" style="display: none;opacity: 1; background: rgba(0,0,0,0.8);" id="modal-subscribe" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-dialog-centered modal-lg my-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header border-0 p-0" style="background: #004982;">
+                <button type="button" class="close" data-dismiss="modal" 
+                (click)="closeBtn = false" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <style>
+                .modalContent h3 {
+                    font-size: 16px;
+                }
+                .knowmore h3 {
+                    font-size: 20px;
+                    color: #fff;
+                }
+                
+
+.modal-header {
+background: #11558a;
+}
+.modal-content {
+border:none;
+}
+.modal-dialog .modal-content .close span {
+margin: 0;
+display: block;
+}
+.modal-dialog .modal-content .close {
+                    color: #11558a;
+                    /* color: #1beba1; */
+                    /* background-color: orange; */
+                    background-color: #fff;
+                    font-size: 33px;
+                    line-height: 0;
+                    height: 40px;
+                    width: 40px;
+                    padding: 0;
+                    opacity: 1;
+                    border-radius: 50%;
+                    box-shadow: 0 0 5px #555;
+                    /* position: absolute;
+                    left: auto;
+                    right: -7px;
+                    top: -7px; */
+                    position: absolute;
+                    left: auto;
+                    right: 7px;
+                    top: 0px;
+                    z-index: 1;
+                    transition: all 0.3s;
+                }
+                
+            </style>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 p-0">
+                            <div id="modalslide" class="carousel slide d-none" data-ride="carousel">
+
+                                <!-- Indicators -->
+                                <ul class="carousel-indicators">
+                                  <li data-bs-target="#modalslide" data-bs-slide-to="0" class="active"></li>
+                                  <li data-bs-target="#modalslide" data-bs-slide-to="1"></li>
+                                </ul>
+                                
+                                <!-- The slideshow -->
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <a href="https://aadudamandhra.ap.gov.in" target="_blank">
+                                      <img src="assets/images/adudamandhra_eng.png" alt="image" class="img-fluid">
+                                  </a>
+                                  </div>
+                                  <div class="carousel-item">
+                                      <a href="https://www.g20.org/en/" target="_blank">
+                                          <img src="assets/images/g20-logo.png" alt="image" class="img-fluid">
+                                      </a>
+                                  </div>
+                                </div>
+                                
+                                <!-- Left and right controls -->
+                                <a class="carousel-control-prev" href="#modalslide" data-bs-slide="prev" style="background: #004982;width: 5%;">
+                                  <span class="carousel-control-prev-icon"></span>
+                                </a>
+                                <a class="carousel-control-next" href="#modalslide" data-bs-slide="next" style="background: #004982;width: 5%;">
+                                  <span class="carousel-control-next-icon"></span> 
+                                </a>
+                              </div>
+
+                            <a class="" href="https://aadudamandhra.ap.gov.in" target="_blank">
+                                <img src="assets/images/adudamandhra_eng.png" alt="image" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- home alert ends -->
+
+
+
+<app-bannerone></app-bannerone>
+
+<section class="news_scroll py-5 d-none">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="news_scroll">
+                    <div class="breakingNews bn-bordernone bn-red mb-3">
+                        <div class="bn-title" style="width: auto;">
+                            <h2 style="display: inline-block;">
+                                <!-- <i class="bi bi-megaphone pe-2 text-white"></i>  -->
+                                <img src="assets/images/notifications.png" alt="image" class="img-fluid">
+                                Notifications
+                            </h2><span></span>
+                        </div>
+                        <ul style="left: 208px;">
+                            <li>
+                                <marquee direction="left" onmouseout="this.start();" onmouseover="this.stop();"
+                                    scrollamount="6" class="mymarque">
+                                    <a class="pe-1" href="https://aadudamandhra.ap.gov.in" target="_blank">
+                                        Aadudam Andhra is Andhra Pradesh’s first ever state-wide sporting tournament launched by
+Hon. CM Shri. YS Jagan Mohan Reddy. Anyone above 15 years of age; Male & Female can
+participate. To register: Visit official website <a href="https://aadudamandhra.ap.gov.in" target="_blank">aadudamandhra.ap.gov.in</a> or Call 1902 or visit your
+nearest Sachivalayam Office. The tournament will start on 15th December, 2023.
+                                    </a>
+                                </marquee>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <div class="box" (click)="scroll(target)">
+            
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div #target></div> -->
+<!-- <app-bannertwo></app-bannertwo> -->
+<section class="py-5 d-none">
+    <!-- <section class="py-5" style="background-color: #0b3336;position: relative;"> -->
+    <!-- <div style="background-image: url('assets/images/banner/bannerone.png');
+        background-repeat: no-repeat;
+        background-size: cover;position:absolute;opacity: 0.3;top: 0;bottom:
+        0;right: 0;left: 0;">
+    </div> -->
+    <div class="container">
+        <div class="d-none">
+            <div class="col-md-6">
+                <div class="logo_image">
+                    <img src="assets/images/logo/apis.png" alt="APIS Logo" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="register_button float-end">
+                    <button class="btn btn-success btn-md">
+                        Register Now
+                    </button>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="main_heading">
+                    <h1>hackathons</h1>
+                </div>
+                <div class="sub_main_heading">
+                    <h3>idea becomes reality</h3>
+                </div>
+                <div class="main_para">
+                    <p>
+                        Summary of executing the “FINTECH Innovation Challenge”
+                        hosted by APIS in partnership with APCFSS & FINBLUE CoE
+                        by STPI, Chennai
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="ro d-none">
+            <div class="col-md-12">
+                <owl-carousel-o [options]="customOptions">
+                    <ng-template carouselSlide>
+                        <div>one</div>
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <div>one</div>
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <div>one</div>
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <div>one</div>
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <div>one</div>
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <div>one</div>
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <div>one</div>
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <div>one</div>
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <div>one</div>
+                    </ng-template>
+                    <ng-template carouselSlide>
+                        <div>one</div>
+                    </ng-template>
+                </owl-carousel-o>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-12">
+                <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
+                    (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
+                    (beforeChange)="beforeChange($event)">
+                    <div ngxSlickItem class="slide">
+                        <img src="https://www.ap.gov.in/assets/images/clients/indiagov.jpg" alt="" width="100%">
+                    </div>
+                    <div ngxSlickItem class="slide">
+                        <img src="https://www.ap.gov.in/assets/images/clients/indiagov.jpg" alt="" width="100%">
+                    </div>
+                    <div ngxSlickItem class="slide">
+                        <img src="https://www.ap.gov.in/assets/images/clients/indiagov.jpg" alt="" width="100%">
+                    </div>
+                    <div ngxSlickItem class="slide">
+                        <img src="https://www.ap.gov.in/assets/images/clients/indiagov.jpg" alt="" width="100%">
+                    </div>
+                    <div ngxSlickItem class="slide">
+                        <img src="https://www.ap.gov.in/assets/images/clients/indiagov.jpg" alt="" width="100%">
+                    </div>
+                    <div ngxSlickItem class="slide">
+                        <img src="https://www.ap.gov.in/assets/images/clients/indiagov.jpg" alt="" width="100%">
+                    </div>
+                    <div ngxSlickItem class="slide">
+                        <img src="https://www.ap.gov.in/assets/images/clients/indiagov.jpg" alt="" width="100%">
+                    </div>
+                    <div ngxSlickItem class="slide">
+                        <img src="https://www.ap.gov.in/assets/images/clients/indiagov.jpg" alt="" width="100%">
+                    </div>
+                    <div ngxSlickItem class="slide">
+                        <img src="https://www.ap.gov.in/assets/images/clients/indiagov.jpg" alt="" width="100%">
+                    </div>
+
+                </ngx-slick-carousel>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- about the programm section starts -->
+<app-aboutone></app-aboutone>
+
+<!-- about the programm section ends -->
+<!-- events section starts -->
+
+<app-events></app-events>
+
+<!-- events section ends -->
+
+
+<!-- general process section starts -->
+
+<app-generalprocess></app-generalprocess>
+
+<!-- general process sectino ends -->
+
+
+<!-- be a sponsor section starts -->
+
+<app-sponsor></app-sponsor>
+
+<!-- be a sponsor section ends -->
+
+
+
+
+
+
+
+
+
+<!-- ecosystem section starts -->
+
+<app-ecopartners></app-ecopartners>
+<!-- ecosystem section ends -->
+
+<!-- roles section starts -->
+
+
+
+
+
+<!-- <app-rolestwo></app-rolestwo> -->
+
+<!-- roles section ends -->
+
+<!-- organisers starts -->
+
+<!-- <app-organizers></app-organizers> -->
+
+<!-- organisers ends -->
+
+<!-- timeline process starts -->
+
+<!-- <app-timelineprocess></app-timelineprocess> -->
+
+<!-- timeline process ends -->
+
+<!-- organized persons starts -->
+
+
+<!-- organized persons ends -->
+
+
+
+<!-- organized section starts -->
+
+<!-- <app-organizedone></app-organizedone> -->
+
+<!-- organized section ends -->
+
+<!-- clients section starts -->
+
+<!-- <app-clientsone></app-clientsone> -->
+
+<!-- clients section ends -->
+
+<!-- invest in ap section starts -->
+
+<app-investinap></app-investinap>
+
+<!-- invest in ap sectino ends -->
+
+<!-- FAQs starts -->
+<app-faqone></app-faqone>
+
+<!-- FAQs ends -->

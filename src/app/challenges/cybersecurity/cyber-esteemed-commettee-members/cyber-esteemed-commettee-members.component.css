@@ -1,0 +1,86 @@
+.committe_member {
+    text-align: center;
+    /* text-align: center;
+    border: 1px solid #EDEDED;
+    padding: 1rem 0;
+    transition: all 1s ease;
+    border-radius: 6px;
+    height: 325px;
+    position: relative;
+    margin-bottom: 1.5rem; */
+    display: block;
+    position: relative;
+    /* max-width: 262px; */
+    background-color: #f2f8f9;
+    border-radius: 4px;
+    padding: 32px 24px;
+    margin: 12px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+}
+.committe_member:hover h4 {
+    color: #fff;
+}
+.committe_member:hover .committe_member_details p {
+    color: #fff;
+}
+.committe_member:hover::before {
+    transform: scale(27);
+  }
+  
+  .committe_member:hover p {
+    transition: all 0.3s ease-out;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .committe_member:hover h3 {
+    transition: all 0.3s ease-out;
+    color: #ffffff;
+  }
+  .committe_member::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #00838d;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(0);
+    /* transform: scale(1); */
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+  }
+
+.committe_member:hover {
+    /* background: #309df0;
+    color: #fff;
+    transform: scale(1.1);
+    z-index: 9; */
+  }
+.committe_member h4 {
+    color: #00ad8c;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+}
+.committe_member h3 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0em;
+    margin-bottom: 0;
+    color: #000;
+    /* text-align: left; */
+}
+.committe_member .committe_member_details {
+    padding: 4px 10px;
+}
+.committe_member .committe_member_details p {
+    line-height: 22px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #333;
+    /* text-align: left; */
+}

@@ -1,0 +1,44 @@
+.section_title_separate h2 {
+    /* color: #fff; */
+    color: #028C72;
+    font-size: 36px;
+    font-weight: 900;
+    /* line-height: 44px; */
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: capitalize;    
+}
+.stmt_heading h2 {
+    font-size: 20px;
+    line-height: 31px;
+    /* letter-spacing: 0em;
+    text-align: left;
+    color: #282828; */
+    color: #0c82aa;
+    font-weight: 600;
+    /* line-height: 24px; */
+}
+.stmt_heading h2 {
+    /* font-size: 20px;
+    font-weight: 600;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #282828; */
+}
+.stmt_content p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #222;
+}
+.stmt_knowmore a {
+    color: #fff;
+    background: #13ad06;
+    font-size: 14px;
+    padding: 10px 16px;
+    text-decoration: none;
+    cursor: pointer;
+}

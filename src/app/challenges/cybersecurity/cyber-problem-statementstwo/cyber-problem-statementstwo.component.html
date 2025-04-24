@@ -1,0 +1,99 @@
+<style>
+    .problem_section {
+        background-image: url('assets/images/cybersecurity/problem_bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+</style>
+<div *ngIf="routeClass">
+    <app-cyberinnerbanner></app-cyberinnerbanner>
+</div>
+<section class="py-5 problem_section">
+    <div class="container">
+        <div class="section_title_separate pt-4">
+            <h2>Problem Statements</h2>
+        </div>
+        <div class="row pt-5">
+            <div class="col-md-4">
+                <div class="stmt_img">
+                    <img src="assets/images/cybersecurity/stmt1.png" alt="image" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="stmt_details">
+                    <div class="stmt_heading">
+                        <h2>Detecting and Mitigating Monitoring and Alteration of Duplicate Websites</h2>
+                    </div>
+                    <div class="stmt_content">
+                        <p>
+                            The prevalence of duplicate websites poses a significant threat to user security and
+                            privacy. Malicious actors often create duplicate versions of legitimate websites to trick
+                            users into disclosing sensitive information or downloading malware.
+                        </p>
+                    </div>
+                    <div class="stmt_knowmore">
+                        <a class="apply_button rounded" (click)="apply('1')">
+                            Know More <i class="bi bi-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row py-4">
+            <div class="col-md-4">
+                <div class="stmt_img">
+                    <img src="assets/images/cybersecurity/stmt2.png" alt="image" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="stmt_details">
+                    <div class="stmt_heading">
+                        <h2>
+                            Detecting and Mitigating Phishing Emails Luring Users to Pay False Claims
+                        </h2>
+                    </div>
+                    <div class="stmt_content">
+                        <p>
+                            Phishing emails continue to be a prevalent cyber threat, with attackers using deceptive techniques to trick users into paying false claims or providing sensitive information. This cyber security challenge aims to assess the effectiveness of email security
+                        </p>
+                    </div>
+                    <div class="stmt_knowmore">
+                        <a class="apply_button rounded" (click)="apply('2')">
+                            Know More <i class="bi bi-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="stmt_img">
+                    <img src="assets/images/cybersecurity/stmt3.png" alt="image" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="stmt_details">
+                    <div class="stmt_heading">
+                        <h2>
+                            Enhancing Cybersecurity for Remote 3D Printing Operations to Prevent Intellectual Property
+                            (IP) Theft
+                        </h2>
+                    </div>
+                    <div class="stmt_content">
+                        <p>
+                            The use of remote 3D printing operations has become increasingly popular, offering
+                            convenience and efficiency. However, this convenience also introduces security risks, as
+                            attackers may attempt to hack into the communication.
+                        </p>
+                    </div>
+                    <div class="stmt_knowmore">
+                        <a class="apply_button rounded" (click)="apply('3')">
+                            Know More <i class="bi bi-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

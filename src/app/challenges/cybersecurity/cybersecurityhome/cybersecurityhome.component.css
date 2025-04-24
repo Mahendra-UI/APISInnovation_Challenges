@@ -1,0 +1,322 @@
+.event_name_details h2 {
+  font-weight: 800;
+}
+::marker {
+    color: #028C72;
+}
+.herobg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 85px 0 34px;
+}
+table tr td {
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+}
+table tr th {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 54px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+}
+.social_img img {
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    padding: 18px;
+}
+
+
+/* about section starts */
+
+.tab-btns .tab-btn:hover,
+.tab-btns .tab-btn.active {
+    color: #ffffff;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background: #1FBCB4;
+    border: 3px solid #B138D1;
+}
+
+.tab-btns .tab-btn.active::after {
+    content: '';
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #B138D1;
+    position: absolute;
+    /* bottom: -6px; */
+    bottom: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+}
+.nav-tabs {
+  position: relative;
+  border: none;
+}
+.tab-btns {
+  position: relative;
+  text-align: center;
+  width: 33.3%;
+}
+.tab-btns .tab-btn {
+  position: relative;
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  background: none;
+  background: #ffffff;
+  color: #fff;
+  border: 1px solid #eee;
+  border-radius: 0px;
+  font-weight: 500;
+  line-height: 24px;
+  cursor: pointer;
+  float: left;
+  text-transform: capitalize;
+  transition: all 500ms ease;
+  background: #B138D1;
+  border: 3px solid #1FBCB4;
+}
+.accordion-item {
+  border-radius: 0;
+  border: 0;
+}
+
+a {
+    text-decoration: none;
+}
+.section_title h3 {
+  position: relative;
+  color: #1FBCB4;
+  font-weight: 600;
+  line-height: 1.3em;
+  margin-bottom: 15px;
+}
+.section_title h4::after {
+    content: "";
+    width: 120px;
+    height: 2px;
+    display: inline-block;
+    background: #1FBCB4;
+    margin: 4px 10px;
+}
+.section_title h4 {
+    position: relative;
+    color: #1FBCB4;
+    font-weight: 600;
+    line-height: 1.3em;
+    margin-bottom: 15px;
+}
+.section_content p {
+    font-size: 16px;
+    line-height: 24px;
+}
+.section_content ul li {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    position: relative;
+    margin-bottom: 8px;
+    /* color: #000000; */
+}
+.lines {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 90vw;
+    z-index: -1;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+}
+.lines .line {
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    background: rgba(255,255,255,.1);
+}
+.lines .line:nth-child(1) {
+    margin-left: -25%;
+}
+.lines .line:nth-child(1):after {
+    animation-delay: 2s;
+}
+.lines .line:after {
+    left: 0;
+    top: -50%;
+    content: "";
+    width: 100%;
+    height: 15vh;
+    display: block;
+    position: absolute;
+    animation: run 7s 0s infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.4,.26,0,.97);
+    background: linear-gradient(to bottom,rgba(255,255,255,0) 0%,#fff 75%,#fff 100%);
+}
+.lines .line:nth-child(5) {
+    margin-left: 40%;
+}
+.lines .line:nth-child(5):after {
+    animation-delay: 2.5s;
+}
+.lines .line:nth-child(3):after {
+    animation-delay: 2.5s;
+}
+.lines .line:nth-child(4):after {
+    animation-delay: 2.5s;
+}
+@keyframes run {
+    0% {
+        top: -50%;
+    }
+
+    100% {
+        top: 110%;
+    }
+}
+@media (max-width: 991px) {
+    .tab-content>.tab-pane {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+/* about section ends */
+
+
+/* process starts */
+
+.section_title_separate h2 {
+    /* color: #fff; */
+    color: #028C72;
+    font-size: 36px;
+    font-weight: 900;
+    /* line-height: 44px; */
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: capitalize;    
+}
+.section_title_separate_bg h2 {
+  /* color: #fff; */
+  color: #fff;
+}
+.ullist ul {
+    padding: 14px;
+}
+.ullist ul li {
+    padding-left: 0;
+    position: relative;
+    margin-bottom: 8px;
+    color: #333;
+}
+.nonfiscal_ullist ul li {
+  color: #fff;
+}
+.nonfiscal_ullist ul li::marker {
+  color: #fff;
+}
+.box {
+    /* background: #DAE5FD; */
+    padding: 0 20px 35px;
+    border-radius: 6px;
+  }
+  .box_four {
+    padding: 0 20px 10px 30px;
+  }
+  .box_details {
+    justify-content: space-around;
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: flex-end
+  }
+  .box_four .box_details {
+    justify-content: space-between;
+  }
+  .box_one {
+    background: #00AD8C;
+  }
+  .box_two {
+    background: orange;
+  }
+  .box_three {
+    background: #41A9FF;
+  }
+  .box_four {
+    background-color: #724FFF;
+    position: relative;
+  }
+  .box_title h2 {
+    font-size: 32px;
+    font-weight: 800;
+    /* line-height: 54px; */
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+  }
+  .box_title p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0em;
+  }
+  .box_title h4 {
+    font-size: 24px;
+    font-weight: 600;
+    /* line-height: 54px; */
+    letter-spacing: 0em;
+    text-align: left;
+    color: #fff;
+  }
+  .art_image img {
+    width: 100%;
+  }
+  .art_image {
+    position: absolute;
+    left: 65%;
+    top:18%
+  }
+  @media screen and (max-width: 450px) {
+    .box_one {
+      margin-bottom: 18px;
+    }
+    .box {
+      padding: 0 15px;
+    }
+  }
+  @media screen and (max-width: 450px){
+    .art_image img {
+      width: 60%;
+    }
+    .art_image {
+      position: absolute;
+      right: auto;
+      top: 26%;
+      left: 55%;
+    }
+  }
+/* process ends */
+
+/* incentives starts */
+
+@media (min-width: 1200px) {
+.incentive_container {
+    max-width: 960px;
+}
+}
+
+/* incentives ends */

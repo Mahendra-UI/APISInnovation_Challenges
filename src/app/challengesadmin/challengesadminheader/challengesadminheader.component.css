@@ -1,0 +1,17 @@
+.header-menu{
+    /* width: 54%; */
+}
+.profileDD .dropdown button .profilePic {
+    border-radius: 100%;
+    width: 50px !important;
+    height: 50px !important;
+}
+.header {
+    background: linear-gradient(270deg, #018C4B -2.64%, #01787C 100%) !important;
+}
+.nav {
+    background: linear-gradient(270deg, #018C4B -2.64%, #01787C 100%) !important;
+}
+.header-menu {
+    /* background: linear-gradient(270deg, #018C4B -2.64%, #01787C 100%) !important; */
+}
